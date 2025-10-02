@@ -1,0 +1,315 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CUnit 2.1-3 &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="udunits" href="../../udunits/index.html" />
+    <link rel="prev" title="CUnit" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../../../../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../virtualization/index.html">Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programminglanguages/index.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../applications/index.html">Scientific Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../managementsoftware/index.html">Management Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../provisioning/index.html">Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../monitoring/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../operatingsystems/index.html">Operating Systems</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Scientific Libraries</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../parallelNetCDF/index.html">ParallelNetCDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../NetCDF/index.html">NetCDF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../GMP/index.html">GMP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../eigen/index.html">Eigen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pybind/index.html">Pybind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../fftw3/index.html">FFTW3</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../beagle/index.html">Beagle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../boost/index.html">Boost</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../open_blas/index.html">OpenBLAS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../icu/index.html">ICU</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../HTSeq/index.html">HTSeq</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Jasper/index.html">Jasper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Qt/index.html">Qt framework</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hypre/index.html">Hypre</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gsl/index.html">GSL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hdf5/index.html">Hdf5</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mpfr/index.html">MPFR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Szip/index.html">Szip</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Zlib/index.html">Zlib</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Zstd/index.html">Zstd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ScaLAPACK/index.html">ScaLAPACK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Cloog/index.html">Cloog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../MPC/index.html">MPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../MCT/index.html">MCT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../LAPACK/index.html">LAPACK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Libpng/index.html">Libpng</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../libtool/index.html">Libtool</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">CUnit</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../index.html#description">Description</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#versions">Versions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#resources">Resources</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../udunits/index.html">udunits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../xz/index.html">XZ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../curl/index.html">curl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../bzip2/index.html">BZIP2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Zstd/Zstd-1.5.2/index.html">Zstd 1.5.2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pcre2/index.html">PCRE2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../accelerators/index.html">Accelerators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Software</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Scientific Libraries</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CUnit</a></li>
+      <li class="breadcrumb-item active">CUnit 2.1-3</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/software/scientific_libraries/cunit/2.1-3/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cunit-2-1-3">
+<span id="cunit-2-1-3-index"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">CUnit 2.1-3</a><a class="headerlink" href="#cunit-2-1-3" title="Link to this heading"></a></h1>
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cunit-2-1-3" id="id1">CUnit 2.1-3</a></p>
+<ul>
+<li><p><a class="reference internal" href="#basic-information" id="id2">Basic information</a></p></li>
+<li><p><a class="reference internal" href="#tested-on-requirements" id="id3">Tested on (Requirements)</a></p></li>
+<li><p><a class="reference internal" href="#installation" id="id4">Installation</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting" id="id5">Troubleshooting</a></p></li>
+<li><p><a class="reference internal" href="#module" id="id6">Module</a></p></li>
+<li><p><a class="reference internal" href="#use" id="id7">Use</a></p></li>
+<li><p><a class="reference internal" href="#resources" id="id8">Resources</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="basic-information">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Basic information</a><a class="headerlink" href="#basic-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Official Website:</strong> <a class="reference external" href="http://cunit.sourceforge.net/">http://cunit.sourceforge.net/</a></p></li>
+<li><p><strong>License:</strong></p></li>
+<li><p><strong>Installed on:</strong> Apolo II</p></li>
+<li><p><strong>Installation date:</strong> 10/06/2020</p></li>
+</ul>
+</section>
+<section id="tested-on-requirements">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Tested on (Requirements)</a><a class="headerlink" href="#tested-on-requirements" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>OS base:</strong> CentOS (x86_64) <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 6.6 (Rocks 6.2)</p></li>
+<li><dl class="simple">
+<dt><strong>Dependencies:</strong></dt><dd><ul>
+<li><p>GCC (tested on 5.4.0)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="installation">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Installation</a><a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Download the 2.1-3 version of CUnit</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>wget<span class="w"> </span>https://github.com/Linaro/libcunit/releases/download/2.1-3/CUnit-2.1-3.tar.bz2
+$<span class="w"> </span>tar<span class="w"> </span>-xvf<span class="w"> </span>CUnit-2.1-3.tar.bz2
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>CUnit-2.1-3
+</pre></div>
+</div>
+</li>
+<li><p>After unpacking CUnit, continue with the following steps for configuration and compilation:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>module<span class="w"> </span>load<span class="w"> </span>gcc/5.4.0
+$<span class="w"> </span>aclocal
+$<span class="w"> </span>autoconf
+$<span class="w"> </span>automake<span class="w">  </span><span class="c1"># If this command fails go to Troubleshooting</span>
+$<span class="w"> </span>./configure<span class="w"> </span>--prefix<span class="o">=</span>/share/apps/cunit/2.1-3/gcc-5.4.0/
+$<span class="w"> </span>make
+$<span class="w"> </span>make<span class="w"> </span>install
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="troubleshooting">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<p>Automake will not work on Cent0S 6.2 or Rocks 6. Then, what you have to do is to use the autoreconf -i command and run automake again, this is because autoconf doesn’t generate the files properly.</p>
+</section>
+<section id="module">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Module</a><a class="headerlink" href="#module" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#%Module1.0####################################################################</span>
+<span class="c1">##</span>
+<span class="c1">## module load cunit/2.1-3_gcc-5.4.0</span>
+<span class="c1">##</span>
+<span class="c1">## /share/apps/modules/cunit/2.1-3_gcc-5.4.0</span>
+<span class="c1">## Written by Laura Sanchez Córdoba</span>
+<span class="c1">## Date: June 10, 2020</span>
+<span class="c1">##</span>
+
+proc<span class="w"> </span>ModulesHelp<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="o">{</span>
+<span class="w">     </span>global<span class="w"> </span>version<span class="w"> </span>modroot
+<span class="w">     </span>puts<span class="w"> </span>stderr<span class="w"> </span><span class="s2">&quot;Sets the environment for using CUnit-2.1-3\</span>
+<span class="s2">                  \nin the shared directory /share/apps/cunit/2.1-3/gcc-5.4.0\</span>
+<span class="s2">                  \nbuilt with gcc-5.4.0&quot;</span>
+<span class="o">}</span>
+
+module-whatis<span class="w"> </span><span class="s2">&quot;(Name________) cunit&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Version_____) 2.1-3&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Compilers___) gcc-5.4.0&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(System______) x86_64-redhat-linux&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Libraries___) &quot;</span>
+
+<span class="c1"># for Tcl script use only</span>
+<span class="nb">set</span><span class="w">         </span>topdir<span class="w">        </span>/share/apps/cunit/2.1-3/gcc-5.4.0
+<span class="nb">set</span><span class="w">         </span>version<span class="w">       </span><span class="m">2</span>.1-3
+<span class="nb">set</span><span class="w">         </span>sys<span class="w">           </span>x86_64-redhat-linux
+
+conflict<span class="w"> </span>cunit
+module<span class="w"> </span>load<span class="w"> </span>gcc/5.4.0
+
+prepend-path<span class="w">    </span>LD_LIBRARY_PATH<span class="w">         </span><span class="nv">$topdir</span>/lib
+prepend-path<span class="w">    </span>LIBRARY_PATH<span class="w">            </span><span class="nv">$topdir</span>/lib
+prepend-path<span class="w">    </span>LD_RUN_PATH<span class="w">             </span><span class="nv">$topdir</span>/lib
+
+prepend-path<span class="w">    </span>C_PATH<span class="w">                  </span><span class="nv">$topdir</span>/lib
+
+prepend-path<span class="w">    </span>C_INCLUDE_PATH<span class="w">          </span><span class="nv">$topdir</span>/include
+prepend-path<span class="w">    </span>CXX_INCLUDE_PATH<span class="w">        </span><span class="nv">$topdir</span>/include
+prepend-path<span class="w">    </span>CPLUS_INCLUDE_PATH<span class="w">      </span><span class="nv">$topdir</span>/include
+
+prepend-path<span class="w">    </span>PKG_CONFIG_PATH<span class="w">         </span><span class="nv">$topdir</span>/lib/pkgconfig
+
+prepend-path<span class="w">    </span>MANPATH<span class="w">                 </span><span class="nv">$topdir</span>/share/man
+
+setenv<span class="w">            </span>CUNIT_HOME<span class="w">              </span><span class="nv">$topdir</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="use">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Use</a><a class="headerlink" href="#use" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>cunit/2.1-3_gcc-5.4.0
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="resources">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Resources</a><a class="headerlink" href="#resources" title="Link to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>CUnit README</p></li>
+</ul>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Author<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Laura Sánchez Córdoba</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="CUnit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../udunits/index.html" class="btn btn-neutral float-right" title="udunits" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

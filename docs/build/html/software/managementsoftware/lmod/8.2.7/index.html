@@ -1,0 +1,352 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lmod 8.2.7 &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="SLURM" href="../../slurm/index.html" />
+    <link rel="prev" title="Lmod" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../../../../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../virtualization/index.html">Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programminglanguages/index.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../applications/index.html">Scientific Applications</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Management Software</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#lmod">Lmod</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">Lmod</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#slurm">SLURM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../provisioning/index.html">Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../monitoring/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../operatingsystems/index.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../scientific_libraries/index.html">Scientific Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../accelerators/index.html">Accelerators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Software</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Management Software</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Lmod</a></li>
+      <li class="breadcrumb-item active">Lmod 8.2.7</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/software/managementsoftware/lmod/8.2.7/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lmod-8-2-7">
+<span id="lmod-8-2-7-index"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">Lmod 8.2.7</a><a class="headerlink" href="#lmod-8-2-7" title="Link to this heading"></a></h1>
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#lmod-8-2-7" id="id1">Lmod 8.2.7</a></p>
+<ul>
+<li><p><a class="reference internal" href="#basic-information" id="id2">Basic information</a></p></li>
+<li><p><a class="reference internal" href="#tested-on-requirements" id="id3">Tested on (Requirements)</a></p></li>
+<li><p><a class="reference internal" href="#installation" id="id4">Installation</a></p></li>
+<li><p><a class="reference internal" href="#lmod-module-hierarchy" id="id5">Lmod Module hierarchy</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id6">References</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="basic-information">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Basic information</a><a class="headerlink" href="#basic-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Official Website:</strong> <a class="reference external" href="https://lmod.readthedocs.io/en/latest/">https://lmod.readthedocs.io/en/latest/</a></p></li>
+<li><p><strong>Package’s Information:</strong> <a class="reference external" href="https://centos.pkgs.org/8/epel-x86_64/Lmod-8.2.7-1.el8.x86_64.rpm.html">https://centos.pkgs.org/8/epel-x86_64/Lmod-8.2.7-1.el8.x86_64.rpm.html</a></p></li>
+<li><p><strong>License:</strong> MIT and LGPLv2</p></li>
+<li><p><strong>Installed on:</strong> Apolo II</p></li>
+</ul>
+</section>
+<section id="tested-on-requirements">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Tested on (Requirements)</a><a class="headerlink" href="#tested-on-requirements" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>OS base:</strong> CentOS (x86_64) <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 8</p></li>
+<li><dl class="simple">
+<dt><strong>Dependencies to run Lmod:</strong></dt><dd><ul>
+<li><p>lua-filesystem</p></li>
+<li><p>lua-posix</p></li>
+<li><p>lua-term</p></li>
+<li><p>coreutils</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="installation">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Installation</a><a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>The following procedure is the easiest way to install and configure Lmod V8.2.7 in a cluster.</p>
+<ol class="arabic">
+<li><p>Install epel-release package and enable all the necessary repositories (epel and PowerTools for Centos 8) and install Lmod.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>epel-release
+$<span class="w"> </span>dnf<span class="w"> </span>upgrade<span class="w"> </span>-y
+$<span class="w"> </span>dnf<span class="w"> </span>--enablerepo<span class="o">=</span>PowerTools,epel<span class="w"> </span>install<span class="w"> </span>Lmod
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Now, we will add our custom modulefiles path in the Lmod configuration files.</p>
+<blockquote>
+<div><p>With the <code class="docutils literal notranslate"><span class="pre">00-modulepath.sh</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/etc/profile.d/
+$<span class="w"> </span>nano<span class="w"> </span><span class="m">00</span>-modulepath.sh
+</pre></div>
+</div>
+<p>Go to where it says “export MODULEPATH=”</p>
+<ul class="simple">
+<li><p>Before the <code class="docutils literal notranslate"><span class="pre">||</span> <span class="pre">:</span></code> add the following <code class="docutils literal notranslate"><span class="pre">:/share/apps/modules/</span></code></p></li>
+<li><p>Save the file.</p></li>
+</ul>
+<p>Your file should look like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$MODULEPATH</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">  </span><span class="o">[</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>readlink<span class="w"> </span>/etc/alternatives/modules.sh<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/usr/share/lmod/lmod/init/profile&quot;</span><span class="w"> </span>-o<span class="w"> </span>-f<span class="w"> </span>/etc/profile.d/z00_lmod.sh<span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">&amp;&amp;</span>
+<span class="w">  </span><span class="nb">export</span><span class="w"> </span><span class="nv">MODULEPATH</span><span class="o">=</span>/etc/modulefiles:/usr/share/modulefiles:/share/apps/modules/<span class="w"> </span><span class="o">||</span><span class="w"> </span>:
+</pre></div>
+</div>
+<p>Now, with the <code class="docutils literal notranslate"><span class="pre">00-modulepath.csh</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/etc/profile.d/
+$<span class="w"> </span>nano<span class="w"> </span><span class="m">00</span>-modulepath.csh
+</pre></div>
+</div>
+<p>Go to where it says “setenv MODULEPATH”</p>
+<ul class="simple">
+<li><p>Add the following at the end of the line <code class="docutils literal notranslate"><span class="pre">:/share/apps/modules/</span></code></p></li>
+<li><p>Save the file.</p></li>
+</ul>
+<p>Your file should look like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">(</span>!<span class="w"> </span><span class="nv">$?</span>MODULEPATH<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">(</span><span class="w"> </span><span class="sb">`</span>readlink<span class="w"> </span>/etc/alternatives/modules.csh<span class="sb">`</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>/usr/share/lmod/lmod/init/cshrc<span class="w"> </span><span class="o">||</span><span class="w"> </span>-f<span class="w"> </span>/etc/profile.d/z00_lmod.csh<span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="k">then</span>
+<span class="w">  </span>setenv<span class="w"> </span>MODULEPATH<span class="w"> </span>/etc/modulefiles:/usr/share/modulefiles:/share/apps/modules/
+endif
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">/share/apps/modules/</span></code> is our custom location for modules, you need to add in the configuration files your own path.</p>
+</div>
+</div></blockquote>
+</li>
+<li><p>Now, lets configure one last thing, these are the files needed to load pre-defined modules when an user logs into your cluster:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/etc/profile.d/
+$<span class="w"> </span>nano<span class="w"> </span>z01_StdEnv.sh
+</pre></div>
+</div>
+<p>Inside the newly created <code class="docutils literal notranslate"><span class="pre">z01_StdEnv.sh</span></code> file, add the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>-z<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$__Init_Default_Modules</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">   </span><span class="nb">export</span><span class="w"> </span><span class="nv">__Init_Default_Modules</span><span class="o">=</span><span class="m">1</span><span class="p">;</span>
+
+<span class="w">   </span><span class="c1">## ability to predefine elsewhere the default list</span>
+<span class="w">   </span><span class="nv">LMOD_SYSTEM_DEFAULT_MODULES</span><span class="o">=</span><span class="si">${</span><span class="nv">LMOD_SYSTEM_DEFAULT_MODULES</span><span class="k">:-</span><span class="s2">&quot;StdEnv&quot;</span><span class="si">}</span>
+<span class="w">   </span><span class="nb">export</span><span class="w"> </span>LMOD_SYSTEM_DEFAULT_MODULES
+<span class="w">   </span>module<span class="w"> </span>--initial_load<span class="w"> </span>--no_redirect<span class="w"> </span>restore
+<span class="k">else</span>
+<span class="w">   </span>module<span class="w"> </span>refresh
+<span class="k">fi</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/etc/profile.d/
+$<span class="w"> </span>nano<span class="w"> </span>z01_StdEnv.csh
+</pre></div>
+</div>
+<p>Inside the newly created <code class="docutils literal notranslate"><span class="pre">z01_StdEnv.csh</span></code> file, add the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="w"> </span>!<span class="w"> </span><span class="nv">$?</span>__Init_Default_Modules<span class="w"> </span><span class="o">)</span><span class="w">  </span><span class="k">then</span>
+<span class="w">  </span>setenv<span class="w"> </span>__Init_Default_Modules<span class="w"> </span><span class="m">1</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="o">(</span><span class="w"> </span>!<span class="w"> </span><span class="nv">$?</span>LMOD_SYSTEM_DEFAULT_MODULES<span class="w"> </span><span class="o">)</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span>setenv<span class="w"> </span>LMOD_SYSTEM_DEFAULT_MODULES<span class="w"> </span><span class="s2">&quot;StdEnv&quot;</span>
+<span class="w">  </span>endif
+<span class="w">  </span>module<span class="w"> </span>--initial_load<span class="w"> </span>restore
+<span class="k">else</span>
+<span class="w">  </span>module<span class="w"> </span>refresh
+endif
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>We create the StdEnv.lua file, which has the modules that we want to load from the beginning. For this example, we will use SLURM and Munge.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/share/apps/modules
+$<span class="w"> </span>nano<span class="w"> </span>StdEnv.lua
+</pre></div>
+</div>
+<p>Inside the newly created <code class="docutils literal notranslate"><span class="pre">StdEnv.lua</span></code> file, add the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>load<span class="o">(</span><span class="s2">&quot;slurm&quot;</span>,<span class="s2">&quot;munge&quot;</span><span class="o">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you already have the modules created, Lmod supports both lua modulefiles and tcl modulefiles.</p>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="lmod-module-hierarchy">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Lmod Module hierarchy</a><a class="headerlink" href="#lmod-module-hierarchy" title="Link to this heading"></a></h2>
+<p>In this section, we will explain how your modules should be saved in order for Lmod to load them correctly.</p>
+<ol class="arabic">
+<li><p>First, we go to our custom modulefiles path</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/share/apps/modules
+$<span class="w"> </span>ls
+slurm/<span class="w"> </span>munge/<span class="w"> </span>gcc/<span class="w"> </span>StdEnv.lua
+</pre></div>
+</div>
+<p>As you can see, all apps have their own directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>slurm/
+$<span class="w"> </span>ls
+<span class="m">20</span>.02.0
+</pre></div>
+</div>
+<p>This is a tcl modulefile, the name is the version of the program.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>/share/apps/modules/gcc
+$<span class="w"> </span>ls
+<span class="m">5</span>.4.0.lua
+</pre></div>
+</div>
+<p>This is a lua modulefile, as you see, Lmod supports both pretty well.</p>
+</li>
+<li><p>Conclusion, each app needs its own directory (the directory should have the app’s name). And inside the directory, the modulefiles’ name should be the app’s version.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you make a lua modulefile, you need to add the file extension <code class="docutils literal notranslate"><span class="pre">.lua</span></code> to the modulefile, if it’s an tcl modulefile, no file extension is needed.</p>
+</div>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="references">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<dl class="simple">
+<dt>Robert McLay - Lmod: A New Environment Module System.</dt><dd><p>Retrieved May 15, 2020, from <a class="reference external" href="https://lmod.readthedocs.io/en/latest/">https://lmod.readthedocs.io/en/latest/</a></p>
+</dd>
+<dt>Robert McLay - How to use a Software Module hierarchy.</dt><dd><p>Retrieved May 15, 2020, from <a class="reference external" href="https://lmod.readthedocs.io/en/latest/080_hierarchy.html">https://lmod.readthedocs.io/en/latest/080_hierarchy.html</a></p>
+</dd>
+<dt>Robert McLay - Converting from TCL/C Environment Modules to Lmod.</dt><dd><p>Retrieved May 15, 2020, from <a class="reference external" href="https://lmod.readthedocs.io/en/latest/073_tmod_to_lmod.html">https://lmod.readthedocs.io/en/latest/073_tmod_to_lmod.html</a></p>
+</dd>
+<dt>Robert McLay - Lua Modulefile Functions.</dt><dd><p>Retrieved May 15, 2020, from <a class="reference external" href="https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html">https://lmod.readthedocs.io/en/latest/050_lua_modulefiles.html</a></p>
+</dd>
+<dt>Robert McLay - An Introduction to Writing Modulefiles.</dt><dd><p>Retrieved May 15, 2020, from <a class="reference external" href="https://lmod.readthedocs.io/en/latest/015_writing_modules.html">https://lmod.readthedocs.io/en/latest/015_writing_modules.html</a></p>
+</dd>
+<dt>Robert McLay - How Lmod Picks which Modulefiles to Load.</dt><dd><p>Retrieved May 15, 2020, from <a class="reference external" href="https://lmod.readthedocs.io/en/latest/060_locating.html">https://lmod.readthedocs.io/en/latest/060_locating.html</a></p>
+</dd>
+<dt>Robert McLay - Providing A Standard Set Of Modules for all Users.</dt><dd><p>Retrieved May 15, 2020, from <a class="reference external" href="https://lmod.readthedocs.io/en/latest/070_standard_modules.html">https://lmod.readthedocs.io/en/latest/070_standard_modules.html</a></p>
+</dd>
+<dt>Packages Search for Linux and Unix - Lmod-8.2.7-1.el8.x86_64.rpm.</dt><dd><p>Retrieved May 15, 2020, from <a class="reference external" href="https://centos.pkgs.org/8/epel-x86_64/Lmod-8.2.7-1.el8.x86_64.rpm.html">https://centos.pkgs.org/8/epel-x86_64/Lmod-8.2.7-1.el8.x86_64.rpm.html</a></p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p>Tomas David Navarro Munera &lt;<a class="reference external" href="mailto:tdnavarrom&#37;&#52;&#48;eafit&#46;edu&#46;co">tdnavarrom<span>&#64;</span>eafit<span>&#46;</span>edu<span>&#46;</span>co</a>&gt;</p></li>
+<li><p>Santiago Alzate Cardona &lt;<a class="reference external" href="mailto:salzatec1&#37;&#52;&#48;eafit&#46;edu&#46;co">salzatec1<span>&#64;</span>eafit<span>&#46;</span>edu<span>&#46;</span>co</a>&gt;</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Lmod" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../slurm/index.html" class="btn btn-neutral float-right" title="SLURM" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

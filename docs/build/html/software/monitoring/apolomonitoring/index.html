@@ -1,0 +1,410 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apolo Monitoring &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Sensu Go" href="../sensu_go/index.html" />
+    <link rel="prev" title="Grafana 5.4" href="../grafana/grafana-5.4/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../../../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../virtualization/index.html">Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programminglanguages/index.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/index.html">Scientific Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../managementsoftware/index.html">Management Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../provisioning/index.html">Provisioning</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Monitoring</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../architecture/index.html">Monitoring Architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../nagios/index.html">Nagios</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sensu/index.html">Sensu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../elk/index.html">ELK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../grafana/index.html">Grafana</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Apolo Monitoring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-information-and-dependencies">Basic information and dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-php">¿What is PHP?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#php-7-4-installation-and-its-dependencies">PHP 7.4 Installation and its dependencies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-composer">¿What is Composer?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#composer-installation">Composer installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-laravel">¿What is Laravel?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#create-a-laravel-project">Create a laravel project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#to-start-a-laravel-project-locally-we-execute">To start a Laravel project locally we execute:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-are-migrations-in-laravel">¿What are migrations in Laravel?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-migration">Creating a migration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-are-controllers-in-laravel">¿What are controllers in laravel?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#generate-a-controller">Generate a controller</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#what-is-travis-ci">¿What is travis-CI?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#steps-to-follow-to-use-travis-ci">Steps to follow to use Travis-CI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#technology-diagram-of-apolo-monitoring">Technology diagram of Apolo Monitoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#authors">Authors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../sensu_go/index.html">Sensu Go</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../operatingsystems/index.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scientific_libraries/index.html">Scientific Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../accelerators/index.html">Accelerators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Software</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Monitoring</a></li>
+      <li class="breadcrumb-item active">Apolo Monitoring</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/software/monitoring/apolomonitoring/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="apolo-monitoring">
+<span id="monitoring-apolomonitoring-index"></span><h1><a class="toc-backref" href="#id1" role="doc-backlink">Apolo Monitoring</a><a class="headerlink" href="#apolo-monitoring" title="Link to this heading"></a></h1>
+<p>Apolo monitoring is a web application designed to monitor the different resources consumed by the jobs running in the Apolo cluster. The resources monitored by the web application are the following: Percentage of cores availability per node, amount of RAM consumed and amount of SWP memories consumed. It also has a log of jobs in execution with their respective information, it has sections of history of percentage of utilization updated every 24 hours, percentage of utilization updated every hour. Apolo monitoring is structured to add new functionalities.</p>
+<nav class="contents" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#apolo-monitoring" id="id1">Apolo Monitoring</a></p>
+<ul>
+<li><p><a class="reference internal" href="#basic-information-and-dependencies" id="id2">Basic information and dependencies</a></p></li>
+<li><p><a class="reference internal" href="#what-is-php" id="id3">¿What is PHP?</a></p></li>
+<li><p><a class="reference internal" href="#php-7-4-installation-and-its-dependencies" id="id4">PHP 7.4 Installation and its dependencies</a></p></li>
+<li><p><a class="reference internal" href="#what-is-composer" id="id5">¿What is Composer?</a></p></li>
+<li><p><a class="reference internal" href="#composer-installation" id="id6">Composer installation</a></p></li>
+<li><p><a class="reference internal" href="#what-is-laravel" id="id7">¿What is Laravel?</a></p></li>
+<li><p><a class="reference internal" href="#create-a-laravel-project" id="id8">Create a laravel project</a></p></li>
+<li><p><a class="reference internal" href="#to-start-a-laravel-project-locally-we-execute" id="id9">To start a Laravel project locally we execute:</a></p></li>
+<li><p><a class="reference internal" href="#what-are-migrations-in-laravel" id="id10">¿What are migrations in Laravel?</a></p></li>
+<li><p><a class="reference internal" href="#creating-a-migration" id="id11">Creating a migration</a></p></li>
+<li><p><a class="reference internal" href="#what-are-controllers-in-laravel" id="id12">¿What are controllers in laravel?</a></p></li>
+<li><p><a class="reference internal" href="#generate-a-controller" id="id13">Generate a controller</a></p></li>
+<li><p><a class="reference internal" href="#what-is-travis-ci" id="id14">¿What is travis-CI?</a></p></li>
+<li><p><a class="reference internal" href="#steps-to-follow-to-use-travis-ci" id="id15">Steps to follow to use Travis-CI</a></p></li>
+<li><p><a class="reference internal" href="#technology-diagram-of-apolo-monitoring" id="id16">Technology diagram of Apolo Monitoring</a></p></li>
+<li><p><a class="reference internal" href="#authors" id="id17">Authors</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id18">References</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="basic-information-and-dependencies">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Basic information and dependencies</a><a class="headerlink" href="#basic-information-and-dependencies" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Deploy date:</strong> 05th May, 2021</p></li>
+<li><p><strong>Tested in:</strong> Apolo test environment</p></li>
+<li><p><strong>Installed in:</strong> Apolo II</p></li>
+<li><p><strong>Programming language:</strong> PHP 7.4</p></li>
+<li><p><strong>Composer:</strong> Composer 2.0.12</p></li>
+<li><p><strong>Framework:</strong> Laravel 5.8</p></li>
+<li><p><strong>Data Base:</strong> Mongo DB</p></li>
+<li><p><strong>Web server:</strong> Apache2</p></li>
+<li><p><strong>DNS server:</strong> Bind9</p></li>
+<li><p><strong>Continuous improvement and deployment:</strong> Travis CI</p></li>
+<li><p><strong>External files:</strong> Scripts sh</p></li>
+</ul>
+</section>
+<section id="what-is-php">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">¿What is PHP?</a><a class="headerlink" href="#what-is-php" title="Link to this heading"></a></h2>
+<p>PHP (recursive acronym for PHP: Hypertext Preprocessor) is a very popular open source language especially suitable for web development and can be embedded in HTML.</p>
+</section>
+<section id="php-7-4-installation-and-its-dependencies">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">PHP 7.4 Installation and its dependencies</a><a class="headerlink" href="#php-7-4-installation-and-its-dependencies" title="Link to this heading"></a></h2>
+<p>Steps to install php 7.4</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2
+
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>apache2.service
+
+sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>apache2.service
+
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>software-properties-common
+
+sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ondrej/php
+
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>php7.4<span class="w"> </span>libapache2-mod-php7.4<span class="w"> </span>php7.4-cli<span class="w"> </span>php7.4-mysql<span class="w"> </span>php7.4-gd<span class="w"> </span>php7.4-imagick<span class="w"> </span>php7.4-recode<span class="w"> </span>php7.4-tidy<span class="w"> </span>php7.4-xmlrpc
+
+php<span class="w"> </span>-v
+</pre></div>
+</div>
+</section>
+<section id="what-is-composer">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">¿What is Composer?</a><a class="headerlink" href="#what-is-composer" title="Link to this heading"></a></h2>
+<p>Composer is a package manager for PHP that provides a standard for managing, downloading and installing dependencies and libraries. Similar to NPM in Node.js and Bundler in Ruby, Composer is the ideal solution when working on complex projects that rely on multiple installation sources. Instead of having to download each dependency manually, Composer does this automatically for us.</p>
+</section>
+<section id="composer-installation">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Composer installation</a><a class="headerlink" href="#composer-installation" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Installation of dependencies</p></li>
+</ol>
+<p>It will install the dependencies. We will need curl to download Composer and php-cli to install and run it. The php-mbstring package is needed to provide functions for a library we will use. Composer uses git to download project dependencies and unzip to extract compressed packages. It is possible to install everything with the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>php-cli<span class="w"> </span>php-mbstring<span class="w"> </span>git<span class="w"> </span>unzip
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Downloading and installing Composer</p></li>
+</ol>
+<p>Composer provides an installer written in PHP. We will download it, check that it is not corrupted and use it to install Composer.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~
+
+curl<span class="w"> </span>-sS<span class="w"> </span>https://getcomposer.org/installer<span class="w"> </span>-o<span class="w"> </span>composer-setup.php
+</pre></div>
+</div>
+<p>Next, verify that the installer matches the SHA-384 hash for the most recent installer found on the Composer Public Keys/Signatures page. Copy the hash from that page and store it as a shell variable:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">HASH</span><span class="o">=</span>544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061
+</pre></div>
+</div>
+<p>Now, run the following PHP script to verify that the installation script runs safely:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>-r<span class="w"> </span><span class="s2">&quot;if (hash_file(&#39;SHA384&#39;, &#39;composer-setup.php&#39;) === &#39;</span><span class="nv">$HASH</span><span class="s2">&#39;) { echo &#39;Installer verified&#39;; } else { echo &#39;Installer corrupt&#39;; unlink(&#39;composer-setup.php&#39;); } echo PHP_EOL;&quot;</span>
+</pre></div>
+</div>
+<p>You will see the following result:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Installer<span class="w"> </span>verified
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you see the Installer corrupt message, you will need to double-check if you used the correct hash and re-download the installation script. Then run the command to verify the installer again. Once you have a verified installer, you can continue.</p>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>To install composer globally, use the following command which will download and install it system-wide as a command named composer, in /usr/local/bin:</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>php<span class="w"> </span>composer-setup.php<span class="w"> </span>--install-dir<span class="o">=</span>/usr/local/bin<span class="w"> </span>--filename<span class="o">=</span>composer
+</pre></div>
+</div>
+<p>To check your installation, run the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>composer
+</pre></div>
+</div>
+<p>You will see that the Composer version and arguments are displayed in this output.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Output
+<span class="w">   </span>______
+<span class="w">  </span>/<span class="w"> </span>____/___<span class="w">  </span>____<span class="w"> </span>___<span class="w">  </span>____<span class="w">  </span>____<span class="w">  </span>________<span class="w">  </span>_____
+<span class="w"> </span>/<span class="w"> </span>/<span class="w">   </span>/<span class="w"> </span>__<span class="w"> </span><span class="se">\/</span><span class="w"> </span>__<span class="w"> </span><span class="sb">`</span>__<span class="w"> </span><span class="se">\/</span><span class="w"> </span>__<span class="w"> </span><span class="se">\/</span><span class="w"> </span>__<span class="w"> </span><span class="se">\/</span><span class="w"> </span>___/<span class="w"> </span>_<span class="w"> </span><span class="se">\/</span><span class="w"> </span>___/
+/<span class="w"> </span>/___/<span class="w"> </span>/_/<span class="w"> </span>/<span class="w"> </span>/<span class="w"> </span>/<span class="w"> </span>/<span class="w"> </span>/<span class="w"> </span>/<span class="w"> </span>/_/<span class="w"> </span>/<span class="w"> </span>/_/<span class="w"> </span><span class="o">(</span>__<span class="w">  </span><span class="o">)</span><span class="w">  </span>__/<span class="w"> </span>/
+<span class="se">\_</span>___/<span class="se">\_</span>___/_/<span class="w"> </span>/_/<span class="w"> </span>/_/<span class="w"> </span>.___/<span class="se">\_</span>___/____/<span class="se">\_</span>__/_/
+<span class="w">                    </span>/_/
+Composer<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.0.12<span class="w"> </span><span class="m">2021</span>-03-03<span class="w"> </span><span class="m">11</span>:44:59
+
+Usage:
+<span class="w">  </span><span class="nb">command</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span><span class="w"> </span><span class="o">[</span>arguments<span class="o">]</span>
+
+Options:
+<span class="w">  </span>-h,<span class="w"> </span>--help<span class="w">                     </span>Display<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message
+<span class="w">  </span>-q,<span class="w"> </span>--quiet<span class="w">                    </span>Do<span class="w"> </span>not<span class="w"> </span>output<span class="w"> </span>any<span class="w"> </span>message
+<span class="w">  </span>-V,<span class="w"> </span>--version<span class="w">                  </span>Display<span class="w"> </span>this<span class="w"> </span>application<span class="w"> </span>version
+<span class="w">      </span>--ansi<span class="w">                     </span>Force<span class="w"> </span>ANSI<span class="w"> </span>output
+<span class="w">      </span>--no-ansi<span class="w">                  </span>Disable<span class="w"> </span>ANSI<span class="w"> </span>output
+<span class="w">  </span>-n,<span class="w"> </span>--no-interaction<span class="w">           </span>Do<span class="w"> </span>not<span class="w"> </span>ask<span class="w"> </span>any<span class="w"> </span>interactive<span class="w"> </span>question
+<span class="w">      </span>--profile<span class="w">                  </span>Display<span class="w"> </span>timing<span class="w"> </span>and<span class="w"> </span>memory<span class="w"> </span>usage<span class="w"> </span>information
+<span class="w">      </span>--no-plugins<span class="w">               </span>Whether<span class="w"> </span>to<span class="w"> </span>disable<span class="w"> </span>plugins.
+<span class="w">  </span>-d,<span class="w"> </span>--working-dir<span class="o">=</span>WORKING-DIR<span class="w">  </span>If<span class="w"> </span>specified,<span class="w"> </span>use<span class="w"> </span>the<span class="w"> </span>given<span class="w"> </span>directory<span class="w"> </span>as<span class="w"> </span>working<span class="w"> </span>directory.
+<span class="w">  </span>-v<span class="p">|</span>vv<span class="p">|</span>vvv,<span class="w"> </span>--verbose<span class="w">           </span>Increase<span class="w"> </span>the<span class="w"> </span>verbosity<span class="w"> </span>of<span class="w"> </span>messages:<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>normal<span class="w"> </span>output,<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>more<span class="w"> </span>verbose<span class="w"> </span>output<span class="w"> </span>and<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>debug
+.<span class="w"> </span>.<span class="w"> </span>.
+</pre></div>
+</div>
+</section>
+<section id="what-is-laravel">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">¿What is Laravel?</a><a class="headerlink" href="#what-is-laravel" title="Link to this heading"></a></h2>
+<p>Laravel is one of the easiest to assimilate open source frameworks for PHP. It is simple, very powerful and has an elegant and fun to use interface.</p>
+</section>
+<section id="create-a-laravel-project">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Create a laravel project</a><a class="headerlink" href="#create-a-laravel-project" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>composer<span class="w"> </span>create-project<span class="w"> </span>laravel/laravel<span class="o">=</span><span class="s2">&quot;5.8.*&quot;</span><span class="w"> </span>NameProject
+</pre></div>
+</div>
+</section>
+<section id="to-start-a-laravel-project-locally-we-execute">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">To start a Laravel project locally we execute:</a><a class="headerlink" href="#to-start-a-laravel-project-locally-we-execute" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>NameProject
+
+php<span class="w"> </span>artisan<span class="w"> </span>serve
+</pre></div>
+</div>
+</section>
+<section id="what-are-migrations-in-laravel">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">¿What are migrations in Laravel?</a><a class="headerlink" href="#what-are-migrations-in-laravel" title="Link to this heading"></a></h2>
+<p>In Laravel, it is said that migrations are a version control of our database, but in reality they are more than that. It allows us to create tables, establish relationships, modify them and of course delete them, and all this through the command console.</p>
+</section>
+<section id="creating-a-migration">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Creating a migration</a><a class="headerlink" href="#creating-a-migration" title="Link to this heading"></a></h2>
+<p>First we will have to open the console or command line and position ourselves in the path of our project. After that, execute the following command to create our first migration.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>artisan<span class="w"> </span>make:migration<span class="w"> </span>create_users_table
+</pre></div>
+</div>
+</section>
+<section id="what-are-controllers-in-laravel">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">¿What are controllers in laravel?</a><a class="headerlink" href="#what-are-controllers-in-laravel" title="Link to this heading"></a></h2>
+<p>Controllers are a mechanism that allows us to group related HTTP request logic and thus better organize our code.</p>
+</section>
+<section id="generate-a-controller">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Generate a controller</a><a class="headerlink" href="#generate-a-controller" title="Link to this heading"></a></h2>
+<p>We generate a new controller with the Artisan command make:controller passing it the name we want to give it. In the example the name is UserController:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>php<span class="w"> </span>artisan<span class="w"> </span>make:controller<span class="w"> </span>UserController
+</pre></div>
+</div>
+</section>
+<section id="what-is-travis-ci">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">¿What is travis-CI?</a><a class="headerlink" href="#what-is-travis-ci" title="Link to this heading"></a></h2>
+<p>Travis-CI is a Continuous Integration system, free for Open Source projects and paid for private projects. It integrates seamlessly with GitHub and automatically executes the pipeline defined in each push or pull request. It tests and builds applications written in Ruby, Node, Objective-C, Go, Java, C#, F# and PHP, among others (running on Linux).</p>
+</section>
+<section id="steps-to-follow-to-use-travis-ci">
+<h2><a class="toc-backref" href="#id15" role="doc-backlink">Steps to follow to use Travis-CI</a><a class="headerlink" href="#steps-to-follow-to-use-travis-ci" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>The first step is to create a GitHub repository containing the code of the application we want to incorporate into Travis-CI.</p></li>
+<li><p>Once the repository is created, we must give permissions to Travis to connect to it. To do this we must go to the repository settings, click on “Services” and select Travis-CI. Once there select “Add to GitHub”.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/travis1.png"><img alt="Add to GitHub" class="align-center" src="../../../_images/travis1.png" style="width: 460.79999999999995px; height: 351.0px;" />
+</a>
+<ol class="arabic simple" start="2">
+<li><p>After this, on the next page we must grant all required permissions to Travis-CI.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/Travis2.png"><img alt="Add to GitHub" class="align-center" src="../../../_images/Travis2.png" style="width: 459.0px; height: 384.0px;" />
+</a>
+<ol class="arabic simple" start="3">
+<li><p>Once in Travis-CI, select the “+”, find the repository you want to work on and click on the switch.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/Travis3.png"><img alt="Add to GitHub" class="align-center" src="../../../_images/Travis3.png" style="width: 450.0px; height: 282.59999999999997px;" />
+</a>
+<ol class="arabic simple" start="4">
+<li><p>Go back to the GitHub repository and create the .travis.yml file. This file should be hosted in the root of the project. It will tell Travis-CI what to do every time it runs a Build.</p></li>
+<li><p>If the Build is satisfactory, Travis-CI will display the results in green, otherwise the results will be red.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../../../_images/Travis4.png"><img alt="Add to GitHub" class="align-center" src="../../../_images/Travis4.png" style="width: 448.8px; height: 217.2px;" />
+</a>
+</section>
+<section id="technology-diagram-of-apolo-monitoring">
+<h2><a class="toc-backref" href="#id16" role="doc-backlink">Technology diagram of Apolo Monitoring</a><a class="headerlink" href="#technology-diagram-of-apolo-monitoring" title="Link to this heading"></a></h2>
+<a class="reference internal image-reference" href="../../../_images/Diagram.png"><img alt="Technology diagram of Apolo Monitoring" class="align-center" src="../../../_images/Diagram.png" style="width: 694.1999999999999px; height: 743.1px;" />
+</a>
+<ol class="arabic simple">
+<li><p>First we have the communication, which is the basis for the whole system built, here we have the cron table where several srcipts.sh are executed at certain times.</p></li>
+<li><p>When any of the scripts in the cron table is executed, it connects to the Apolo master through SSH to execute scripts that are specifically programmed to obtain information such as: cluster utilization percentage, RAM memory consumed, SWP memory consumed, core availability percentage and running jobs information.</p></li>
+<li><p>Once the information is ready in the Apolo master, another cron is executed to SCP the application home with the information generated in the previous step.</p></li>
+<li><p>At the end of the SCP, another cron is run to review the downloaded data and then inject the information into the database.</p></li>
+<li><p>When an Apolo administrator wants to use the web application, he/she will have to search from a web browser (Google Chrome), hostname to be able to use it.</p></li>
+<li><p>When looking up the web application in the browser, the Internet will communicate with the web server, then the web server will communicate with the DNS server to resolve the name of the web application and give a response.</p></li>
+<li><p>After the DNS server gives its response, a request will be made to the controller from the web server, then a request will be made to the view, thus returning the view to the user.</p></li>
+<li><p>If the view needs any query in the database, simply from the model it communicates with the database, to return the data needed by the view.</p></li>
+<li><p>If you want to add a new functionality to the web application, you must make its respective unit tests to git push to the remote repository.</p></li>
+<li><p>Upon git push to the remote repository, Travis CI will go live and make the decision whether the changes are right or wrong.</p></li>
+<li><p>If they are correct, all that needs to be done is a git pull to upload the changes to the repository in which it is deployed.</p></li>
+</ol>
+</section>
+<section id="authors">
+<h2><a class="toc-backref" href="#id17" role="doc-backlink">Authors</a><a class="headerlink" href="#authors" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Bryan López Parra &lt;<a class="reference external" href="mailto:blopezp&#37;&#52;&#48;eafit&#46;edu&#46;co">blopezp<span>&#64;</span>eafit<span>&#46;</span>edu<span>&#46;</span>co</a>&gt;</p></li>
+</ul>
+</section>
+<section id="references">
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>GitHub: Where the world builds software. (2021). Retrieved 11 March 2021, from <a class="reference external" href="https://github.com/">https://github.com/</a></p></li>
+<li><p>Slurm Workload Manager - Documentation. (2021). Retrieved 11 March 2021, from <a class="reference external" href="https://Slurm.schedmd.com/documentation.html">https://Slurm.schedmd.com/documentation.html</a></p></li>
+<li><p>MySQL. (2021). Retrieved 11 March 2021, from <a class="reference external" href="https://www.mysql.com/">https://www.mysql.com/</a></p></li>
+<li><p>Laravel - The PHP Framework For Web Artisans. (2021). Retrieved 28 July 2021, from <a class="reference external" href="https://laravel.com/">https://laravel.com/</a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../grafana/grafana-5.4/index.html" class="btn btn-neutral float-left" title="Grafana 5.4" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../sensu_go/index.html" class="btn btn-neutral float-right" title="Sensu Go" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

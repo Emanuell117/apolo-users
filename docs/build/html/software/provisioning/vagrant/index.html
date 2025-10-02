@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vagrant &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Disk Resize" href="vagrant-storage/index.html" />
+    <link rel="prev" title="1. Ansible Vault" href="../ansible/troubleshooting.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../../../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../virtualization/index.html">Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programminglanguages/index.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/index.html">Scientific Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../managementsoftware/index.html">Management Software</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Provisioning</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../ansible/index.html">Ansible</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Vagrant</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#basic-information">Basic information</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operatingsystems/index.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scientific_libraries/index.html">Scientific Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../accelerators/index.html">Accelerators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Software</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Provisioning</a></li>
+      <li class="breadcrumb-item active">Vagrant</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/software/provisioning/vagrant/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vagrant">
+<h1>Vagrant<a class="headerlink" href="#vagrant" title="Link to this heading"></a></h1>
+<section id="basic-information">
+<h2>Basic information<a class="headerlink" href="#basic-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Official website:</strong> <a class="reference external" href="https://www.vagrantup.com/">https://www.vagrantup.com/</a></p></li>
+<li><p><strong>Version:</strong> 2.2.3</p></li>
+<li><p><strong>License:</strong> MIT License</p></li>
+</ul>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
+<p>You can find the Vagrant’s latest version in the link <a class="reference external" href="https://www.vagrantup.com/">https://www.vagrantup.com/</a>
+downloads.html . Also, you can install it with your package manager (check the
+version before install it).</p>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading"></a></h2>
+<p>Vagrant commands usually have the following structure: <code class="code highlight bash docutils literal highlight-bash">vagrant<span class="w"> </span><span class="nb">command</span>
+<span class="o">[</span>&lt;args&gt;<span class="o">]</span></code> but in this particular case, we have custom options that help with our
+ansible configuration so the structure changes to: <code class="code highlight bash docutils literal highlight-bash">vagrant
+--custom-option<span class="o">=</span>option<span class="w"> </span>--<span class="w"> </span><span class="nb">command</span><span class="w"> </span><span class="o">[</span>&lt;args&gt;<span class="o">]</span></code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Be careful with the spaces between the double minus and the command.</p></li>
+<li><p>If you use a diferent configuration for vagrant remember to delete the
+custom option <code class="code highlight bash docutils literal highlight-bash">--custom-option<span class="o">=</span>option<span class="w"> </span>--</code> to use the vagrant’s usual
+commands</p></li>
+</ul>
+</div>
+<ol class="arabic">
+<li><p>Use the <code class="code highlight bash docutils literal highlight-bash">up</code> command alongside the <code class="code highlight bash docutils literal highlight-bash">--provision</code> argument to
+import the VM into VirtualBox and run ansible.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>--machine<span class="o">=</span>&lt;single&gt;<span class="w"> </span>--<span class="w"> </span>up<span class="w"> </span>--provision
+</pre></div>
+</div>
+</li>
+<li><p>Check if ansible ran successfully. If it didn’t, find the error and patch it.</p></li>
+<li><p>Test your patch by syncing the changes and re-provision.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vagrant<span class="w"> </span>--machine<span class="o">=</span>&lt;single&gt;<span class="w"> </span>--<span class="w"> </span>rsync
+vagrant<span class="w"> </span>--machine<span class="o">=</span>&lt;single&gt;<span class="w"> </span>--<span class="w"> </span>provision
+</pre></div>
+</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Our Vagrant’s custom options are:</p>
+<ul class="simple">
+<li><p>machine: Machine hostname for ansible and the playbooks’s name.</p></li>
+<li><p>vault-id: The password file for ansible.</p></li>
+</ul>
+</div>
+<p><strong>Useful commands</strong></p>
+<ul class="simple">
+<li><p><strong>ssh:</strong> Connects to machine via SSH.
+<code class="code highlight bash docutils literal highlight-bash">vagrant<span class="w"> </span>ssh</code></p></li>
+<li><p><strong>reload:</strong> Restarts vagrant machine, loads new Vagrantfile configuration.
+<code class="code highlight bash docutils literal highlight-bash">vagrant<span class="w"> </span>reload</code></p></li>
+<li><p><strong>halt:</strong> Stops the vagrant machine.
+<code class="code highlight bash docutils literal highlight-bash">vagrant<span class="w"> </span>halt</code></p></li>
+<li><p><strong>destroy:</strong> Stops and deletes all traces of the vagrant machine.
+<code class="code highlight bash docutils literal highlight-bash">vagrant<span class="w"> </span>destroy</code></p></li>
+</ul>
+<p>For more help run <code class="code highlight bash docutils literal highlight-bash">vagrant<span class="w"> </span>-h</code> or <code class="code highlight bash docutils literal highlight-bash">vagrant<span class="w"> </span>&lt;command&gt;<span class="w"> </span>-h</code> for help on
+any individual command.</p>
+<section id="vagrantfile">
+<h3>Vagrantfile<a class="headerlink" href="#vagrantfile" title="Link to this heading"></a></h3>
+<p>The primary function of the Vagrantfile is to describe the type of machine
+required for a project, and how to configure and provision these machines <a class="footnote-reference brackets" href="#id2" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> .
+The syntax of Vagrantfile is Ruby.</p>
+<p>This vagrantfile is based on a vagranfile with custom variables to ease the use
+of ansible_local handling and other options.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-text"><a class="reference download internal" download="" href="../../../_downloads/f4df5902e1e9ab3cbd5146e6fa2a6048/vagrantfile"><code class="xref download docutils literal notranslate"><span class="pre">vagrantfile</span></code></a></span><a class="headerlink" href="#id3" title="Link to this code"></a></div>
+<div class="highlight-ruby notranslate"><div class="highlight"><pre><span></span><span class="c1"># -*- mode: ruby -*-</span>
+<span class="c1">#</span>
+<span class="c1"># Title       : vagrantfile</span>
+<span class="c1"># Description : A vagranfile example with some custom configuration.</span>
+<span class="c1"># Author      : Manuela Carrasco</span>
+<span class="c1"># Date        : Jan 21, 2019</span>
+<span class="c1"># Usage       : vagrant [options] -- command [&lt;args&gt;]</span>
+<span class="c1"># Help        : vagrant -h</span>
+<span class="c1">#==============================================================================</span>
+
+<span class="c1"># This example has custom options like &quot;machine&quot; but we won&#39;t show the code</span>
+<span class="c1"># where the extra options were added.</span>
+
+<span class="no">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">config</span><span class="o">|</span><span class="w"> </span><span class="c1"># The vagrantfile api version is 2</span>
+<span class="w">  </span><span class="c1"># The virtual machine image. For more information</span>
+<span class="w">  </span><span class="c1"># https://www.vagrantup.com/docs/vagrant-cloud/</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;centos/7&quot;</span>
+<span class="w">  </span><span class="c1"># Custom configuration for virtualbox machine</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provider</span><span class="w"> </span><span class="ss">:virtualbox</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">vb</span><span class="o">|</span>
+<span class="w">    </span><span class="n">vb</span><span class="o">.</span><span class="n">customize</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;modifyvm&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">:id</span><span class="p">,</span>
+<span class="w">                  </span><span class="s2">&quot;--memory&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;2048&quot;</span><span class="o">]</span>
+<span class="w">  </span><span class="k">end</span>
+<span class="w">  </span><span class="c1"># Configure ansible in the VM</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">provision</span><span class="w"> </span><span class="s2">&quot;ansible_local&quot;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="o">|</span><span class="n">ansible</span><span class="o">|</span>
+<span class="w">    </span><span class="n">ansible</span><span class="o">.</span><span class="n">playbook</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;./site.yml&quot;</span>
+<span class="w">    </span><span class="c1"># Perform the playbook tasks as another user</span>
+<span class="w">    </span><span class="n">ansible</span><span class="o">.</span><span class="n">become</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kp">true</span>
+<span class="w">    </span><span class="c1"># machine is a custom option for the hostname</span>
+<span class="w">    </span><span class="c1"># and it&#39;s the playbooks name</span>
+<span class="w">    </span><span class="n">ansible</span><span class="o">.</span><span class="n">groups</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">machine</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;default&quot;</span><span class="o">]</span><span class="p">,</span>
+<span class="w">      </span><span class="s2">&quot;all:children&quot;</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="o">[</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">machine</span><span class="si">}</span><span class="s2">&quot;</span><span class="o">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1"># vault_id is a password file for ansible</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">vault_id</span><span class="o">.</span><span class="n">empty?</span>
+<span class="w">      </span><span class="n">ansible</span><span class="o">.</span><span class="n">vault_password_file</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">vault_id</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">  </span><span class="k">end</span>
+<span class="w">  </span><span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">hostname</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;my-virtualmachine&quot;</span><span class="w"> </span><span class="c1"># Set VM hostname</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For more information about vagrantfile and how to create it go to
+<a class="reference external" href="https://www.vagrantup.com/docs/vagrantfile/">https://www.vagrantup.com/docs/vagrantfile/</a></p>
+</div>
+</section>
+<section id="troublehooting">
+<h3>Troublehooting<a class="headerlink" href="#troublehooting" title="Link to this heading"></a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vagrant-storage/index.html">Disk Resize</a></li>
+</ul>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Author<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<ul class="simple">
+<li><p>Manuela Carrasco Pinzón &lt;<a class="reference external" href="mailto:mcarras1&#37;&#52;&#48;eafit&#46;edu&#46;co">mcarras1<span>&#64;</span>eafit<span>&#46;</span>edu<span>&#46;</span>co</a>&gt;</p></li>
+<li><p>Tomás Felipe Llano Rios &lt;<a class="reference external" href="mailto:tllanos&#37;&#52;&#48;eafit&#46;edu&#46;co">tllanos<span>&#64;</span>eafit<span>&#46;</span>edu<span>&#46;</span>co</a>&gt;</p></li>
+</ul>
+</section>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Vagrantfile. (n.d.). Retrieved January 21, 2019, from
+<a class="reference external" href="https://www.vagrantup.com/docs/vagrantfile/">https://www.vagrantup.com/docs/vagrantfile/</a></p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../ansible/troubleshooting.html" class="btn btn-neutral float-left" title="1. Ansible Vault" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="vagrant-storage/index.html" class="btn btn-neutral float-right" title="Disk Resize" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

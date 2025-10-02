@@ -1,0 +1,550 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting information about jobs &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Fairshare" href="fairshare.html" />
+    <link rel="prev" title="Testing my job" href="testing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../../../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../virtualization/index.html">Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programminglanguages/index.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/index.html">Scientific Applications</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Management Software</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../index.html#lmod">Lmod</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#slurm">SLURM</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">SLURM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tools">Tools</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../provisioning/index.html">Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operatingsystems/index.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scientific_libraries/index.html">Scientific Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../accelerators/index.html">Accelerators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Software</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Management Software</a></li>
+          <li class="breadcrumb-item"><a href="index.html">SLURM</a></li>
+      <li class="breadcrumb-item active"><strong>Getting information about jobs</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/software/managementsoftware/slurm/info-jobs.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-information-about-jobs">
+<span id="info-jobs"></span><h1><strong>Getting information about jobs</strong><a class="headerlink" href="#getting-information-about-jobs" title="Link to this heading"></a></h1>
+<nav class="contents local" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#getting-cluster-s-state" id="id18">Getting cluster(s) state</a></p></li>
+<li><p><a class="reference internal" href="#what-s-going-on-with-my-job-getting-information-about-submitted-jobs" id="id19">What’s going on with my job? Getting information about submitted jobs</a></p></li>
+<li><p><a class="reference internal" href="#canceling-a-job" id="id20">Canceling a job</a></p></li>
+<li><p><a class="reference internal" href="#what-happened-with-my-job-getting-information-about-finished-jobs" id="id21">What happened with my job? Getting information about finished jobs</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id22">References</a></p></li>
+</ul>
+</nav>
+<section id="getting-cluster-s-state">
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">Getting cluster(s) state</a><a class="headerlink" href="#getting-cluster-s-state" title="Link to this heading"></a></h2>
+<p>In Slurm, nodes have different states <a class="footnote-reference brackets" href="#id11" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, this tells if a job can or not be
+allocated.</p>
+<table class="docutils align-default" id="id15">
+<caption><span class="caption-text">Slurm node’s states</span><a class="headerlink" href="#id15" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 38.5%" />
+<col style="width: 61.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>State</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>DOWN</strong></p></td>
+<td><p>The node is unavailable for use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ALLOCATED</strong></p></td>
+<td><p>The node has been allocated to one or more jobs.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>IDLE</strong></p></td>
+<td><p>The node is not allocated to any jobs and is available for use</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>MIXED</strong></p></td>
+<td><p>The node has some of its CPUs <strong>ALLOCATED</strong> while others are <strong>IDLE</strong></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>DRAINED</strong></p></td>
+<td><p>The node is unavailable for use per <strong>system administrator</strong> request</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>MAINT</strong></p></td>
+<td><p>The node is under maintenance by <strong>system administrator</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>The simplest way to get information about the state of our clusters is
+using the commands: <code class="docutils literal notranslate"><span class="pre">sinfo</span></code> and <code class="docutils literal notranslate"><span class="pre">squeue</span></code>. Here we list some useful
+examples <a class="footnote-reference brackets" href="#id10" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id11" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id12" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> .</p>
+<ul>
+<li><p>View information about nodes and partitions and a longer version (<code class="docutils literal notranslate"><span class="pre">-N</span></code>)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sinfo
+$<span class="w"> </span>sinfo<span class="w"> </span>-N
+</pre></div>
+</div>
+</li>
+<li><p>Show nodes that are in a specific state.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sinfo<span class="w"> </span>-t<span class="w"> </span>idle
+$<span class="w"> </span>sinfo<span class="w"> </span>-t<span class="w"> </span>mix
+$<span class="w"> </span>sinfo<span class="w"> </span>-t<span class="w"> </span>alloc
+</pre></div>
+</div>
+</li>
+<li><p>Report node state reason (if exists)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sinfo<span class="w"> </span>-R
+</pre></div>
+</div>
+</li>
+<li><p>Show queued jobs and long version</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>squeue
+$<span class="w"> </span>squeue<span class="w"> </span>-l
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">squeue</span></code> also includes running jobs.</p>
+</div>
+</li>
+<li><p>Show queued jobs by a specific user. Most of the cases you will need to get information
+about your jobs, using the variable <code class="docutils literal notranslate"><span class="pre">$USER</span></code> could be useful.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
+$<span class="w"> </span>squeue<span class="w"> </span>-u<span class="w"> </span>pepito77
+</pre></div>
+</div>
+</li>
+<li><p>Show queued jobs of a specific partition/queue.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>squeue<span class="w"> </span>-p<span class="w"> </span>debug
+$<span class="w"> </span>squeue<span class="w"> </span>-p<span class="w"> </span>bigmem
+$<span class="w"> </span>squeue<span class="w"> </span>-p<span class="w"> </span>accel
+</pre></div>
+</div>
+</li>
+<li><p>Show queued jobs that are in a specific state. To know more about the job’s state see:
+<a class="reference internal" href="#what-s-going-on-with-my-job-getting-information-about-submitted-jobs">What’s going on with my job? Getting information about submitted jobs</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>squeue<span class="w"> </span>-t<span class="w"> </span>PD
+$<span class="w"> </span>squeue<span class="w"> </span>-t<span class="w"> </span>R
+$<span class="w"> </span>squeue<span class="w"> </span>-t<span class="w"> </span>F
+$<span class="w"> </span>squeue<span class="w"> </span>-t<span class="w"> </span>PR
+</pre></div>
+</div>
+</li>
+<li><p>Show detailed information about the node(s)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scontrol<span class="w"> </span>show<span class="w"> </span>node<span class="w"> </span>compute-1-25
+$<span class="w"> </span>scontrol<span class="w"> </span>show<span class="w"> </span>node<span class="w"> </span>compute-0-5
+$<span class="w"> </span>scontrol<span class="w"> </span>show<span class="w"> </span>node<span class="w"> </span>debug-0-0
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need further information, you can always check the command’s manual
+<code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">squeue</span></code>, <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">sinfo</span></code>, etc.</p>
+</div>
+</section>
+<section id="what-s-going-on-with-my-job-getting-information-about-submitted-jobs">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">What’s going on with my job? Getting information about submitted jobs</a><a class="headerlink" href="#what-s-going-on-with-my-job-getting-information-about-submitted-jobs" title="Link to this heading"></a></h2>
+<p>Once your job is queued in a specific partition you may want to know its state.
+There some of the Slurm’s job states <a class="footnote-reference brackets" href="#id12" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>.</p>
+<table class="docutils align-default" id="id16">
+<caption><span class="caption-text">Job’s states</span><a class="headerlink" href="#id16" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 38.5%" />
+<col style="width: 61.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>State</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>CANCELLED (CA)</strong></p></td>
+<td><p>Job was explicitly cancelled by the user or system administrator</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>COMPLETED (CD)</strong></p></td>
+<td><p>Job has terminated all processes on all nodes with an exit code of zero</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>PENDING (PD)</strong></p></td>
+<td><p>Job is awaiting resource allocation, there is some different reasons</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>RUNNING (R)</strong></p></td>
+<td><p>Job currently has an allocation</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>STOPPED (ST)</strong></p></td>
+<td><p>Job has an allocation, but execution has been stopped with SIGSTOP signal. CPUS have been retained by this job</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>SUSPENDED (S)</strong></p></td>
+<td><p>Job has an allocation, but execution has been suspended and CPUs have been released for other jobs</p></td>
+</tr>
+</tbody>
+</table>
+<p>You can check the expected start time of a job(s) base on the actual queue state:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>squeue<span class="w"> </span>--start<span class="w"> </span>--job<span class="w"> </span><span class="m">1234</span>
+$<span class="w"> </span>squeue<span class="w"> </span>--start<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
+</pre></div>
+</div>
+<p>You can also check the reason why your job is waiting, usually is displayed by
+default in the command <code class="docutils literal notranslate"><span class="pre">squeue</span></code>. You can also change the output format, thus,
+display the field <code class="docutils literal notranslate"><span class="pre">reason</span> <span class="pre">(%R)</span></code> more clearly.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span><span class="w"> </span>--format<span class="o">=</span><span class="s2">&quot;%j %name %U %R&quot;</span>
+$<span class="w"> </span>squeue<span class="w"> </span>--jobid<span class="w"> </span><span class="m">1234</span><span class="w"> </span>--format<span class="o">=</span><span class="s2">&quot;%j %name %U %R&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Not only pending jobs set the reason field, also failed jobs
+set it, showing its failure message.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can also use <code class="docutils literal notranslate"><span class="pre">sprio</span></code> in order to know the priority of your job(s).
+For further information see <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">sprio</span></code></p>
+</div>
+<p>In the following table <a class="footnote-reference brackets" href="#id12" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> we describe the most common reasons:</p>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">Job’s reasons</span><a class="headerlink" href="#id17" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Reason</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>QOSMaxCpuPerUserLimit</strong></p></td>
+<td><p>User’s allocated jobs are already using the maximum number of CPUs allowed per user. Once the number of allocated CPUs decrease, the job(s) will start</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Priority</strong></p></td>
+<td><p>One or more higher priority jobs exist for this queue, usually jobs are allocated with a First In First Out set up, for further information see <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">sprio</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Resources</strong></p></td>
+<td><p>The job is waiting for resources (CPUs, Memory, nodes, etc). to become available</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>TimeLimit</strong></p></td>
+<td><p>The job exhausted its time limit</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>BadConstraints</strong></p></td>
+<td><p>The job’s constraints can not be satisfied</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Related with <code class="docutils literal notranslate"><span class="pre">QOSMaxCpuPerUserLimit</span></code> Slurm’s reason, the maximum number of
+allocated resources at the same time (in specific Memory and CPUs) per user
+differ between clusters:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Apolo:</strong></dt><dd><p><strong>CPUs:</strong> 96
+<strong>Memory:</strong> 192G</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Cronos:</strong></dt><dd><p><strong>CPUs:</strong> 96
+<strong>Memory:</strong> 384G</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>It is important to note that those are policies defined by
+Apolo - Centro de Computación Científica.</p>
+</div>
+<p>Another useful command to show information about recent jobs is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scontrol<span class="w"> </span>show<span class="w"> </span>job<span class="w"> </span><span class="m">1234</span>
+</pre></div>
+</div>
+<p>There is an example of its output from <a class="reference internal" href="../../../supercomputers/apolo-ii/index.html#about-apolo-ii"><span class="std std-ref">Apolo II</span></a>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">JobId</span><span class="o">=</span><span class="m">1234</span><span class="w"> </span><span class="nv">JobName</span><span class="o">=</span>CuteJob
+<span class="w">   </span><span class="nv">UserId</span><span class="o">=</span>user1<span class="o">(</span><span class="m">11</span><span class="o">)</span><span class="w"> </span><span class="nv">GroupId</span><span class="o">=</span>user1<span class="o">(</span><span class="m">34</span><span class="o">)</span><span class="w"> </span><span class="nv">MCS_label</span><span class="o">=</span>N/A
+<span class="w">   </span><span class="nv">Priority</span><span class="o">=</span><span class="m">2000</span><span class="w"> </span><span class="nv">Nice</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">Account</span><span class="o">=</span>ddp<span class="w"> </span><span class="nv">QOS</span><span class="o">=</span>normal
+<span class="w">   </span><span class="nv">JobState</span><span class="o">=</span>RUNNING<span class="w"> </span><span class="nv">Reason</span><span class="o">=</span>None<span class="w"> </span><span class="nv">Dependency</span><span class="o">=(</span>null<span class="o">)</span>
+<span class="w">   </span><span class="nv">Requeue</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">Restarts</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">BatchFlag</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">Reboot</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">ExitCode</span><span class="o">=</span><span class="m">0</span>:0
+<span class="w">   </span><span class="nv">RunTime</span><span class="o">=</span><span class="m">2</span>-22:33:43<span class="w"> </span><span class="nv">TimeLimit</span><span class="o">=</span><span class="m">4</span>-03:00:00<span class="w"> </span><span class="nv">TimeMin</span><span class="o">=</span>N/A
+<span class="w">   </span><span class="nv">SubmitTime</span><span class="o">=</span><span class="m">2019</span>-01-29T03:46:05<span class="w"> </span><span class="nv">EligibleTime</span><span class="o">=</span><span class="m">2019</span>-01-29T03:46:05
+<span class="w">   </span><span class="nv">AccrueTime</span><span class="o">=</span><span class="m">2019</span>-01-29T03:46:05
+<span class="w">   </span><span class="nv">StartTime</span><span class="o">=</span><span class="m">2019</span>-01-29T15:47:12<span class="w"> </span><span class="nv">EndTime</span><span class="o">=</span><span class="m">2019</span>-02-02T18:47:12<span class="w"> </span><span class="nv">Deadline</span><span class="o">=</span>N/A
+<span class="w">   </span><span class="nv">PreemptTime</span><span class="o">=</span>None<span class="w"> </span><span class="nv">SuspendTime</span><span class="o">=</span>None<span class="w"> </span><span class="nv">SecsPreSuspend</span><span class="o">=</span><span class="m">0</span>
+<span class="w">   </span><span class="nv">LastSchedEval</span><span class="o">=</span><span class="m">2019</span>-01-29T15:47:12
+<span class="w">   </span><span class="nv">Partition</span><span class="o">=</span>accel<span class="w"> </span>AllocNode:Sid<span class="o">=</span>apolo:2222
+<span class="w">   </span><span class="nv">ReqNodeList</span><span class="o">=(</span>null<span class="o">)</span><span class="w"> </span><span class="nv">ExcNodeList</span><span class="o">=(</span>null<span class="o">)</span>
+<span class="w">   </span><span class="nv">NodeList</span><span class="o">=</span>compute-0-5
+<span class="w">   </span><span class="nv">BatchHost</span><span class="o">=</span>compute-0-5
+<span class="w">   </span><span class="nv">NumNodes</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">NumCPUs</span><span class="o">=</span><span class="m">32</span><span class="w"> </span><span class="nv">NumTasks</span><span class="o">=</span><span class="m">32</span><span class="w"> </span>CPUs/Task<span class="o">=</span><span class="m">1</span><span class="w"> </span>ReqB:S:C:T<span class="o">=</span><span class="m">0</span>:0:*:*
+<span class="w">   </span><span class="nv">TRES</span><span class="o">=</span><span class="nv">cpu</span><span class="o">=</span><span class="m">32</span>,mem<span class="o">=</span>60000M,node<span class="o">=</span><span class="m">1</span>,billing<span class="o">=</span><span class="m">32</span>
+<span class="w">   </span>Socks/Node<span class="o">=</span>*<span class="w"> </span>NtasksPerN:B:S:C<span class="o">=</span><span class="m">0</span>:0:*:*<span class="w"> </span><span class="nv">CoreSpec</span><span class="o">=</span>*
+<span class="w">   </span><span class="nv">MinCPUsNode</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">MinMemoryCPU</span><span class="o">=</span>1875M<span class="w"> </span><span class="nv">MinTmpDiskNode</span><span class="o">=</span><span class="m">0</span>
+<span class="w">   </span><span class="nv">Features</span><span class="o">=(</span>null<span class="o">)</span><span class="w"> </span><span class="nv">DelayBoot</span><span class="o">=</span><span class="m">00</span>:00:00
+<span class="w">   </span><span class="nv">OverSubscribe</span><span class="o">=</span>OK<span class="w"> </span><span class="nv">Contiguous</span><span class="o">=</span><span class="m">0</span><span class="w"> </span><span class="nv">Licenses</span><span class="o">=(</span>null<span class="o">)</span><span class="w"> </span><span class="nv">Network</span><span class="o">=(</span>null<span class="o">)</span>
+<span class="w">   </span><span class="nv">Command</span><span class="o">=</span>/home/user1/cutejob/slurm.sh
+<span class="w">   </span><span class="nv">WorkDir</span><span class="o">=</span>/home/user1/cutejob
+<span class="w">   </span><span class="nv">StdErr</span><span class="o">=</span>/home/user1/cutejob/cutejob.1234.err
+<span class="w">   </span><span class="nv">StdIn</span><span class="o">=</span>/dev/null
+<span class="w">   </span><span class="nv">StdOut</span><span class="o">=</span>/home/user1/cutejob/cutejob.1234.out
+<span class="w">   </span><span class="nv">Power</span><span class="o">=</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We also recommend to log in (using <code class="docutils literal notranslate"><span class="pre">ssh</span></code> ) into the respective compute node(s)
+of your job and run <code class="docutils literal notranslate"><span class="pre">htop</span></code> in order to see if your process(es) are actually
+running in the way you would expect and check if the compute’s <code class="docutils literal notranslate"><span class="pre">CPU</span> <span class="pre">Load</span></code>
+is the optimum. To know more about see: <a class="reference internal" href="faq.html#faq-slurm"><span class="std std-ref">FAQ</span></a></p>
+</div>
+</section>
+<section id="canceling-a-job">
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Canceling a job</a><a class="headerlink" href="#canceling-a-job" title="Link to this heading"></a></h2>
+<p>Once your job is submitted, you can do some operations in order to
+change its state. Here we list some useful examples <a class="footnote-reference brackets" href="#id10" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#id13" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a>  .</p>
+<ul>
+<li><p>Cancel job 1234</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scancel<span class="w"> </span><span class="m">1234</span>
+</pre></div>
+</div>
+</li>
+<li><p>Cancel only array ID 9 of job array 1234</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scancel<span class="w"> </span>1234_9
+</pre></div>
+</div>
+</li>
+<li><p>Cancel all my jobs (without taking care of its state)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scancel<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
+</pre></div>
+</div>
+</li>
+<li><p>Cancel my waiting (<code class="docutils literal notranslate"><span class="pre">pending</span></code> state) jobs.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scancel<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span><span class="w"> </span>-t<span class="w"> </span>pending
+</pre></div>
+</div>
+</li>
+<li><p>Cancel the jobs queue on a given partition (queue)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scancel<span class="w"> </span>-p<span class="w"> </span>longjobs
+</pre></div>
+</div>
+</li>
+<li><p>Cancel one or more jobs by name</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scancel<span class="w"> </span>--name<span class="w"> </span>MyJobName
+</pre></div>
+</div>
+</li>
+<li><p>Pause the job 1234</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scontrol<span class="w"> </span>hold<span class="w"> </span><span class="m">1234</span>
+</pre></div>
+</div>
+</li>
+<li><p>Resume the job 1234</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scontrol<span class="w"> </span>resume<span class="w"> </span><span class="m">1234</span>
+</pre></div>
+</div>
+</li>
+<li><p>Cancel and restart the job 1234</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>scontrol<span class="w"> </span>requeue<span class="w"> </span><span class="m">1234</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="what-happened-with-my-job-getting-information-about-finished-jobs">
+<h2><a class="toc-backref" href="#id21" role="doc-backlink">What happened with my job? Getting information about finished jobs</a><a class="headerlink" href="#what-happened-with-my-job-getting-information-about-finished-jobs" title="Link to this heading"></a></h2>
+<p>Here we are going to explain how to get information about completed jobs
+(that are no longer in the queue). Those commands use the Slurm database to
+get the information.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, these commands only search jobs associated with the cluster you are
+log in, however,  for example, if you want to search a job that was executed on
+<a class="reference internal" href="../../../supercomputers/cronos/index.html#about-cronos"><span class="std std-ref">Cronos</span></a> while you are in a session in
+<a class="reference internal" href="../../../supercomputers/apolo-ii/index.html#about-apolo-ii"><span class="std std-ref">Apolo II</span></a>, you can do it using the argument
+<code class="docutils literal notranslate"><span class="pre">-M</span> <span class="pre">slurm-cronos</span></code>. Other possible options are <code class="docutils literal notranslate"><span class="pre">-M</span> <span class="pre">slurm-apolo</span></code>
+and <code class="docutils literal notranslate"><span class="pre">-M</span> <span class="pre">all</span></code></p>
+</div>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">sacct</span></code>: is used to get general accounting data for all jobs and job steps
+in the Slurm <a class="footnote-reference brackets" href="#id14" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>.</p>
+<blockquote>
+<div><blockquote>
+<div><ul>
+<li><p>In case you remember the <code class="docutils literal notranslate"><span class="pre">jobid</span></code> you can use</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sacct<span class="w"> </span>-j1234
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Get information about today’s jobs submitted by a user (or users)</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sacct<span class="w"> </span>-S<span class="k">$(</span>date<span class="w"> </span>+<span class="s1">&#39;%m/%d/%y&#39;</span><span class="k">)</span><span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Get information about jobs submitted by a user (or users) 1 week ago</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sacct<span class="w"> </span>-S<span class="k">$(</span>date<span class="w"> </span>+<span class="s1">&#39;%m/%d/%y&#39;</span><span class="w"> </span>--date<span class="o">=</span><span class="s2">&quot;1 week ago&quot;</span><span class="k">)</span><span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Get information about the job(s) by its name(s)</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sacct<span class="w"> </span>-S<span class="k">$(</span>date<span class="w"> </span>+<span class="s1">&#39;%m/%d/%y&#39;</span><span class="k">)</span><span class="w"> </span>--name<span class="w"> </span>job_name
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">-S</span></code> argument is to select eligible jobs in any state after the specified time.
+It is mandatory to search jobs in case that a  <code class="docutils literal notranslate"><span class="pre">jobid</span></code> was not specified.
+It supports multiple date formats, see <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">sacct</span></code> to know more about.</p>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="references">
+<h2><a class="toc-backref" href="#id22" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id10" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id7">2</a>)</span>
+<p>University of Luxembourg (UL) HPC Team (2018). UL HPC Tutorial:
+Advanced scheduling with SLURM. Retrieved 16:45 January 28, 2019 from
+<a class="reference external" href="https://ulhpc-tutorials.readthedocs.io/en/latest/scheduling/advanced/">https://ulhpc-tutorials.readthedocs.io/en/latest/scheduling/advanced/</a></p>
+</aside>
+<aside class="footnote brackets" id="id11" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id3">2</a>)</span>
+<p>SchedMD LLC (2018). Slurm, resource management [sinfo]. Copy of manual text available at
+<a class="reference external" href="https://slurm.schedmd.com/sinfo.html">https://slurm.schedmd.com/sinfo.html</a>. Retrieved 14:24 January 31, 2019</p>
+</aside>
+<aside class="footnote brackets" id="id12" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id4">1</a>,<a role="doc-backlink" href="#id5">2</a>,<a role="doc-backlink" href="#id6">3</a>)</span>
+<p>SchedMD LLC (2018). Slurm, resource management [squeue]. Copy of manual text available at
+<a class="reference external" href="https://slurm.schedmd.com/squeue.html">https://slurm.schedmd.com/squeue.html</a>. Retrieved 12:30 February 1, 2019</p>
+</aside>
+<aside class="footnote brackets" id="id13" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">4</a><span class="fn-bracket">]</span></span>
+<p>SchedMD LLC (2018). Slurm, resource management [scancel]. Copy of manual text available at
+<a class="reference external" href="https://slurm.schedmd.com/sinfo.html">https://slurm.schedmd.com/sinfo.html</a>.  Retrieved 15:47 January 31, 2019</p>
+</aside>
+<aside class="footnote brackets" id="id14" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">5</a><span class="fn-bracket">]</span></span>
+<p>SchedMD LLC (2018). Slurm, resource management [sacct]. Copy of manual text available at
+<a class="reference external" href="https://slurm.schedmd.com/sacct.html">https://slurm.schedmd.com/sacct.html</a>. Retrieved 8:44 February 4, 2019</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="testing.html" class="btn btn-neutral float-left" title="Testing my job" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fairshare.html" class="btn btn-neutral float-right" title="Fairshare" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

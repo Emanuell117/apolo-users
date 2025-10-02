@@ -1,0 +1,1054 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Inventory &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="1. Tags" href="dynamic_control.html" />
+    <link rel="prev" title="Ansible" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../../../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../virtualization/index.html">Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../programminglanguages/index.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../applications/index.html">Scientific Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../managementsoftware/index.html">Management Software</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Provisioning</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Ansible</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="index.html#basic-information">Basic information</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#preliminaries">Preliminaries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#dynamic-control">Dynamic control</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#deployment-strategy">Deployment strategy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#tips-and-tricks">Tips and tricks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#troubleshooting">Troubleshooting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="index.html#authors">Authors</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vagrant/index.html">Vagrant</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operatingsystems/index.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../scientific_libraries/index.html">Scientific Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../accelerators/index.html">Accelerators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Software</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Provisioning</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Ansible</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Inventory</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/software/provisioning/ansible/preliminaries.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="inventory">
+<span id="sssec-ansible-inventory"></span><h1><span class="section-number">1. </span>Inventory<a class="headerlink" href="#inventory" title="Link to this heading"></a></h1>
+<p>Ansible performs actions, also known as tasks, over a group of computers; in order to
+do so it reads a plain text file called “inventory file” containing a list of
+hostnames, or IP addresses, often grouped based on one or multiple shared features.</p>
+<p>The inventory file is located by default under <code class="code highlight bash docutils literal highlight-bash">/etc/ansible/hosts</code>
+and would typically follow the conventions shown below:</p>
+<ol class="arabic">
+<li><p>Group names are delimited by <code class="code highlight bash docutils literal highlight-bash"><span class="o">[</span></code> and <code class="code highlight bash docutils literal highlight-bash"><span class="o">]</span></code>. e.g. group lbservers would be written as <code class="code highlight bash docutils literal highlight-bash"><span class="o">[</span>lbservers<span class="o">]</span></code>.</p></li>
+<li><p>Hosts below a group definition are to be taken as members of it. e.g.</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">; lbservers -&gt; Group</span>
+<span class="c1">; [host1,host2].example.com -&gt; Members</span>
+<span class="k">[lbservers]</span>
+<span class="na">host1.example.com</span>
+<span class="na">host2.example.com</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="lbservers' components" src="../../../_images/inventory_example-1.png" />
+</figure>
+</li>
+<li><p>Using the suffix <code class="code highlight bash docutils literal highlight-bash">:children</code> within a group definition indicates the presence of
+nested groups (i.e. subgroups). e.g.</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">; lbservers -&gt; Group</span>
+<span class="c1">; lb[south,north] -&gt; Subgroups</span>
+<span class="k">[lbservers:children]</span>
+<span class="na">lbsouth</span>
+<span class="na">lbnorth</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Subgroups are only declared as part of a parent-child relation
+(i.e. nesting depth is 1), thus implying that relations where
+nesting depth is greater than 1 require multiple declarations.</p>
+</div>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">; lbservers -&gt; Grandparent</span>
+<span class="c1">; lb[south,north] -&gt; Children</span>
+<span class="k">[lbservers:children]</span>
+<span class="na">lbsouth</span>
+<span class="na">lbnorth</span>
+
+<span class="c1">; lbs[1,2].example.com -&gt; Grandchildren</span>
+<span class="k">[lbsouth]</span>
+<span class="na">lbs1.example.com</span>
+<span class="na">lbs2.example.com</span>
+</pre></div>
+</div>
+</li>
+<li><p>The suffix <code class="code highlight bash docutils literal highlight-bash">:vars</code> within a group definition is used to declare and assign
+variables to a particular set of hosts or subgroups. e.g.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These variables are relative to group members and can be overwritten
+by subgroups and other ansible components (e.g. playbooks, tasks).
+See <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">Ansible’s Variable Precedence article</a> for more information.</p>
+</div>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="c1">; lbsouth and lbnorth will inherit all</span>
+<span class="c1">; variables declared within lbservers.</span>
+<span class="k">[lbservers:children]</span>
+<span class="na">lbsouth</span>
+<span class="na">lbnorth</span>
+
+<span class="k">[lbservers:vars]</span>
+<span class="na">requests_timeout</span><span class="o">=</span><span class="s">5</span>
+<span class="na">max_hosts_to_serve</span><span class="o">=</span><span class="s">10</span>
+
+<span class="c1">; &quot;requests_timeout&quot; will be overwritten</span>
+<span class="c1">; for lbsouth members only.</span>
+<span class="k">[lbsouth:vars]</span>
+<span class="na">requests_timeout</span><span class="o">=</span><span class="s">3</span>
+
+<span class="c1">; Members of this group will not recognize</span>
+<span class="c1">; variables declared for lbservers, as they</span>
+<span class="c1">; do not belong to it.</span>
+<span class="k">[backupservers]</span>
+<span class="na">bk1.example.com</span>
+<span class="na">bk2.example.com</span>
+</pre></div>
+</div>
+<figure class="align-default">
+<img alt="lbservers' components" src="../../../_images/inventory_example-children.png" />
+</figure>
+</li>
+</ol>
+<p>It is impotant to highlight that there are two default groups: <code class="code highlight bash docutils literal highlight-bash">all</code> and
+<code class="code highlight bash docutils literal highlight-bash">ungrouped</code>, which, unlike any other group, can be omitted within the
+inventory file, as their definitions are both implicit. Please be aware that:</p>
+<ol class="arabic simple">
+<li><p>Hierarchically, all groups and hosts are members of <code class="code highlight bash docutils literal highlight-bash">all</code>.</p></li>
+<li><p>Hosts with no group other than all belong to <code class="code highlight bash docutils literal highlight-bash">ungrouped</code>. Therefore, hosts
+will be members of at least two groups.</p></li>
+</ol>
+<p>Hence, it is true for the examples above:</p>
+<figure class="align-default">
+<img alt="lbservers' components" src="../../../_images/inventory_example-implicit.png" />
+</figure>
+</section>
+<section id="group-variables">
+<span id="sssec-ansible-groupvars"></span><h1><span class="section-number">2. </span>Group variables<a class="headerlink" href="#group-variables" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature will not be detailed, as there is plenty of information about it in
+<a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html#splitting-out-host-and-group-specific-data">Ansible’s document: Working with Inventory</a></p>
+</div>
+<p>Keeping too much data within the inventory file can make it become complex, difficult
+to read and maintain. Ansible allows to easily bypass this issue by introducing a
+mechanism to split groups and hosts data:</p>
+<ol class="arabic">
+<li><p>Create a folder called <code class="code highlight bash docutils literal highlight-bash">group_vars</code> at the same level as the inventory file.
+That is, if the inventory file is located under <code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span></code> then the
+folder must be there as well. e.g.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$ANSIBLE_HOME</span>/group_vars
+ls<span class="w"> </span><span class="nv">$ANSIBLE_HOME</span>/
+inventory<span class="w">    </span>group_vars/
+</pre></div>
+</div>
+</li>
+<li><p>Create files under <code class="code highlight bash docutils literal highlight-bash">group_vars</code> matching your group names and store the
+corresponding variables into each one. Take the example from the <a class="reference internal" href="#inventory">Inventory</a>
+section; There are variables declared for two groups, hence there would be
+two files under <code class="code highlight bash docutils literal highlight-bash">group_vars</code> as shown below:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/group_vars/lbservers</span>
+<span class="nn">---</span>
+<span class="nt">requests_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+<span class="nt">max_hosts_to_serve</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/group_vars/lbsouth</span>
+<span class="nn">---</span>
+<span class="nt">requests_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Moreover, variables within a group can be further organized by decoupling the
+files inside <code class="code highlight bash docutils literal highlight-bash">group_vars</code>. Ansible will read all files under
+directories named after groups or hosts. For instance, variables from the
+lbservers group can reside in multiple files under
+<code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span>/group_vars/lbservers/</code>. e.g.</p>
+<blockquote>
+<div><div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/group_vars/lbservers/requests</span>
+<span class="nn">---</span>
+<span class="nt">requests_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/group_vars/lbservers/config</span>
+<span class="nn">---</span>
+<span class="nt">max_hosts_to_serve</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="modules">
+<span id="sssec-ansible-modules"></span><h1><span class="section-number">3. </span>Modules<a class="headerlink" href="#modules" title="Link to this heading"></a></h1>
+<p>A module can be interpreted as a function ansible calls from a task. Basically,
+a module is the function’s entire body (i.e. declaration), waiting to be
+called from a task or an ansible ad-hoc command.</p>
+</section>
+<section id="playbooks">
+<span id="sssec-ansible-playbooks"></span><h1><span class="section-number">4. </span>Playbooks<a class="headerlink" href="#playbooks" title="Link to this heading"></a></h1>
+<p>A playbook is a text file, written in YAMl format, containing information on
+which tasks to apply on which hosts. This information is contained within a
+definition block called “Play”. Take the following playbook for example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lbsouth</span>
+<span class="w">  </span><span class="nt">vars</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nginx_conf_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/nginx/</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lbnorth</span>
+<span class="w">  </span><span class="nt">vars</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nginx_conf_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/opt/nginx/</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lbservers</span>
+<span class="w">  </span><span class="nt">vars</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nginx_log_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/ansible</span>
+<span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install/update nginx</span>
+<span class="w">    </span><span class="nt">yum</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">      </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">latest</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Place nginx config file</span>
+<span class="w">    </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">templates/nginx.conf.j2</span>
+<span class="w">      </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nginx_conf_dir</span><span class="nv"> </span><span class="s">}}/nginx.conf&quot;</span>
+<span class="w">    </span><span class="nt">notify</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart nginx</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ensure nginx is running</span>
+<span class="w">    </span><span class="nt">systemd</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">      </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
+<span class="w">      </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">handlers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart nginx</span>
+<span class="w">      </span><span class="nt">systemd</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">        </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restarted</span>
+</pre></div>
+</div>
+<p>Plays are separated by a non-printable ‘\n’, thus there are three plays. Each one
+uses the keyword “hosts” to describe a group, defined in the inventory file,
+on which to apply some tasks and/or set variables, keywords “tasks” and “vars”
+respectively.</p>
+<p>An easy way to comprehend what a playbook is, and why it is useful, is thinking on
+what would one need to do in scripting languages, like bash, to accomplish what
+a playbook is meant to. Take the task “Place nginx config file”. It calls
+Ansible’s <code class="code highlight bash docutils literal highlight-bash">template</code> module, which creates a file based
+on a Jinja2 template. Hence, one could either use templates alongside bash, which
+becomes complex and difficult to maintain really fast, use an external software to
+parse them, like ruby <code class="code highlight bash docutils literal highlight-bash">erb</code> or python + Jinja2, or manage static
+files. Thereupon, additional concerns arise: how to deliver
+files to lbservers’ hosts?, how to manage variables within them?, etc. Basically,
+these questions represent steps to achieve something specific (for the task under
+consideration, place a file called <code class="code highlight bash docutils literal highlight-bash">nginx.conf</code>, whose content may vary,
+on all hosts within lbservers) that can be interpreted as to lead a system to a
+desired state. e.g.</p>
+<ul class="simple">
+<li><p>Original state: lbservers’ hosts not having <code class="code highlight bash docutils literal highlight-bash">nginx.conf</code></p></li>
+<li><p>Desired state: lbservers’ hosts having <code class="code highlight bash docutils literal highlight-bash">nginx.conf</code></p></li>
+</ul>
+<p>A playbook can be, therefore, defined as the abstraction of a system’s final state,
+comprised of intermediate states represented by tasks.
+Sort of an assembly line analogy:</p>
+<figure class="align-default" id="id6">
+<img alt="McDonald's assembly line" src="../../../_images/McDonalds-Assembly-Line.jpg" />
+<figcaption>
+<p><span class="caption-text">McDonald’s assembly line. Retrieved august 28, 2018 from <a class="reference external" href="https://slideplayer.com/slide/9882222/">https://slideplayer.com/slide/9882222/</a></span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p>Task 1 would represent an ansible run being triggered, tasks 2 to 5 the system’s pass
+through each intermediate state
+(i.e. bun toasted, bun assembled with condiments, patty wrapped,
+Order placed on heated landing pad) and task 6 the desired state (i.e. customer satisfied).</p>
+</section>
+<section id="roles">
+<span id="sssec-ansible-roles"></span><h1><span class="section-number">5. </span>Roles<a class="headerlink" href="#roles" title="Link to this heading"></a></h1>
+<p>A role is a hierarchical directory structure intended to decouple playbooks
+by breaking them into multiple files, which is particularly useful to
+create reusable components and write simpler playbooks.
+A role’s layout would typically look as below:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are more directories than those listed below. See <a class="reference external" href="https://docs.ansible.com/ansible/2.5/user_guide/playbooks_reuse_roles.html">Ansible’s official documentation</a>
+for more information.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;playbook<span class="w"> </span><span class="m">1</span>&gt;
+&lt;playbook<span class="w"> </span><span class="m">2</span>&gt;
+.
+.
+.
+&lt;playbook<span class="w"> </span>n&gt;
+inventory
+roles/
+<span class="w">  </span>common/
+<span class="w">    </span>tasks/
+<span class="w">    </span>handlers/
+<span class="w">    </span>files/
+<span class="w">    </span>templates/
+<span class="w">    </span>vars/
+</pre></div>
+</div>
+<p>Let us elucidate on how playbooks can be decoupled by using the notion of a role. Take the
+example on the <a class="reference internal" href="#playbooks">Playbooks</a> section.</p>
+<ol class="arabic">
+<li><p><strong>Identify a common feature within your tasks</strong>. For example, all tasks on the
+third play are related to nginx.</p></li>
+<li><p>Use that common feature as a base to name your role and create a directory
+under <code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span>/roles</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span></code> is used as a way to represent ansible’s folder
+location within the filesystem (e.g. /etc/ansible), which
+may vary depending on the setup.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w">  </span><span class="nv">$ANSIBLE_HOME</span>/roles/nginx
+</pre></div>
+</div>
+</li>
+<li><p><strong>Decouple tasks by placing them in taskfiles</strong>. As the name implies, a taskfile is
+a file containing task declarations; this files are often stored under
+<code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span>/roles/&lt;role&gt;/tasks</code> and their name is irrelevant exept
+for <code class="code highlight bash docutils literal highlight-bash">main.yml</code>, which must always be present. Although tasks can be all defined
+inside <code class="code highlight bash docutils literal highlight-bash">main.yml</code>, it is recommended to declare them in different taskfiles
+when their number is large enough to make a coupled taskfile difficult to read, and then
+call each one from <code class="code highlight bash docutils literal highlight-bash">main.yml</code>.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/roles/nginx/tasks/packages.yml</span>
+<span class="nn">---</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install/update nginx</span>
+<span class="w">  </span><span class="nt">yum</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">latest</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/roles/nginx/tasks/config.yml</span>
+<span class="nn">---</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Place nginx config file</span>
+<span class="w w-Error"> </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">   </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">templates/nginx.conf.j2</span>
+<span class="w">   </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nginx_conf_dir</span><span class="nv"> </span><span class="s">}}/nginx.conf&quot;</span>
+<span class="w"> </span><span class="nt">notify</span><span class="p">:</span>
+<span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart nginx</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ensure nginx is running</span>
+<span class="w">  </span><span class="nt">systemd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/roles/nginx/tasks/main.yml</span>
+<span class="nn">---</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Including</span><span class="nv"> </span><span class="s">taskfile</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">taskfile</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">  </span><span class="nt">include_tasks</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">taskfile</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;packages.yml&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;config.yml&#39;</span>
+<span class="w">  </span><span class="nt">loop_control</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loop_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">taskfile</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Decouple variables</strong>. Declare them as <a class="reference internal" href="#group-variables">Group variables</a>, in the role’s local
+context or within a task. For instance, if one desires the variable
+<code class="code highlight bash docutils literal highlight-bash">nginx_log_dir</code> to be set for all hosts applying the nginx role:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using <code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span>/roles/&lt;role&gt;/vars</code> to store variables visible to all
+tasks within a role is a common practice. However, “vars” can be named
+differently or even placed under some other location.</p>
+<p>One would typically store variables inside
+<code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span>/roles/&lt;role&gt;/vars/main.yml</code> as for ansible to auto-load
+them, but there is also the alternative to do it manually (shown in this example).</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$ANSIBLE_HOME</span>/roles/nginx/vars
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/roles/nginx/vars/config.yml</span>
+<span class="nn">---</span>
+<span class="nt">nginx_log_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/log/ansible</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/roles/nginx/tasks/main.yml</span>
+<span class="nn">---</span>
+<span class="c1"># Unlike group_vars, ansible does not read files</span>
+<span class="c1"># inside the vars folder automatically, except &quot;main.yml&quot;.</span>
+<span class="c1"># Therefore, in this case, it must explicitly be told to do so.</span>
+<span class="c1"># Remark: vars&#39; location may vary.</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;Include</span><span class="nv"> </span><span class="s">variables&#39;</span>
+<span class="w">  </span><span class="nt">include_vars</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">dir</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;../vars&#39;</span>
+<span class="w">    </span><span class="nt">extensions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yml</span>
+
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Including</span><span class="nv"> </span><span class="s">taskfile</span><span class="nv"> </span><span class="s">{{</span><span class="nv"> </span><span class="s">taskfile</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">  </span><span class="nt">include_tasks</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">taskfile</span><span class="nv"> </span><span class="s">}}&quot;</span>
+<span class="w">  </span><span class="nt">with_items</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;packages.yml&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&#39;config.yml&#39;</span>
+<span class="w">  </span><span class="nt">loop_control</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">loop_var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">taskfile</span>
+</pre></div>
+</div>
+<p>As for the variables under <code class="code highlight bash docutils literal highlight-bash">lbsouth</code> and <code class="code highlight bash docutils literal highlight-bash">lbnorth</code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/group_vars/lbnorth</span>
+<span class="nn">---</span>
+<span class="nt">nginx_conf_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/opt/nginx/conf</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/group_vars/lbsouth</span>
+<span class="nn">---</span>
+<span class="nt">requests_timeout</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
+<span class="nt">nginx_conf_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/nginx/conf</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Decouple handlers</strong>. Handlers are stored the same way taskfiles are, but in
+a different location. They are placed inside the “handler” directory, which
+is at the same level as the “tasks” directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="nv">$ANSIBLE_HOME</span>/roles/nginx/handlers
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># $ANSIBLE_HOME/roles/nginx/handlers/main.yml</span>
+<span class="nn">---</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart nginx</span>
+<span class="w">  </span><span class="nt">systemd</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restarted</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Decouple templates</strong>. Stored under <code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span>/roles/&lt;role&gt;/templates</code>,
+it is highly recommended to create a directory structure resembling that of the
+location where templates will be rendered. e.g. <code class="code highlight bash docutils literal highlight-bash">nginx.conf</code> will be
+rendered in <code class="code highlight bash docutils literal highlight-bash">/etc/nginx/conf</code> for <code class="code highlight bash docutils literal highlight-bash">lbsouth</code> and <code class="code highlight bash docutils literal highlight-bash">/opt/nginx/conf</code>,
+for <code class="code highlight bash docutils literal highlight-bash">lbnorth</code>, hence the template would reside in either
+<code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span>/roles/nginx/templates/etc/nginx/conf</code> or
+<code class="code highlight bash docutils literal highlight-bash"><span class="nv">$ANSIBLE_HOME</span>/roles/nginx/templates/opt/nginx/conf</code>. Note modifying the layout
+also implies adjusting all tasks using <code class="code highlight bash docutils literal highlight-bash">nginx.conf.j2</code>.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># $ANSIBLE_HOME/roles/nginx/tasks/config.yml</span>
+<span class="linenos"> 2</span><span class="nn">---</span>
+<span class="linenos"> 3</span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Place nginx config file</span>
+<span class="linenos"> 4</span><span class="w w-Error"> </span><span class="nt">template</span><span class="p">:</span>
+<span class="hll"><span class="linenos"> 5</span><span class="w">   </span><span class="nt">src</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">templates/etc/nginx/conf/nginx.conf.j2</span>
+</span><span class="linenos"> 6</span><span class="w">   </span><span class="nt">dest</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">nginx_conf_dir</span><span class="nv"> </span><span class="s">}}/nginx.conf&quot;</span>
+<span class="linenos"> 7</span><span class="w"> </span><span class="nt">notify</span><span class="p">:</span>
+<span class="linenos"> 8</span><span class="w">   </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">restart nginx</span>
+<span class="linenos"> 9</span>
+<span class="linenos">10</span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ensure nginx is running</span>
+<span class="linenos">11</span><span class="w">  </span><span class="nt">systemd</span><span class="p">:</span>
+<span class="linenos">12</span><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+<span class="linenos">13</span><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">started</span>
+<span class="linenos">14</span><span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Call the role</strong> from the playbook (Note how it became simpler).</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lbservers</span>
+<span class="w">  </span><span class="nt">roles</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<p>Finally, consider the designated behavior for each role ‘x’ component
+(Taken from <a class="footnote-reference brackets" href="#five" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a>):</p>
+<ul class="simple">
+<li><p>If roles/x/tasks/main.yml exists, tasks listed therein will be added to the play.</p></li>
+<li><p>If roles/x/handlers/main.yml exists, handlers listed therein will be added to the play.</p></li>
+<li><p>If roles/x/vars/main.yml exists, variables listed therein will be added to the play.</p></li>
+<li><p>If roles/x/defaults/main.yml exists, variables listed therein will be added to the play.</p></li>
+<li><p>If roles/x/meta/main.yml exists, any role dependencies listed therein will be added to the list of roles (ansible 1.3 and later).</p></li>
+<li><p>Any copy, script, template or include tasks (in the role) can reference files in roles/x/{files,templates,tasks}/ (dir depends on task) without having to path them relatively or absolutely.</p></li>
+</ul>
+</section>
+<section id="vault-encryption">
+<span id="sssec-ansible-vault"></span><h1><span class="section-number">6. </span>Vault (Encryption)<a class="headerlink" href="#vault-encryption" title="Link to this heading"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some features will not be detailed. Basic usage can be found in
+<a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/vault.html?highlight=vault">Ansible’s document: Ansible Vault</a></p>
+</div>
+<p>“New in Ansible 1.5, “Vault” is a feature of ansible that allows keeping sensitive data such as passwords
+or keys in encrypted files, rather than as plaintext in your playbooks or roles. These vault files can
+then be distributed or placed in source control.” <a class="footnote-reference brackets" href="#one" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<section id="create-encrypted-files">
+<h2><span class="section-number">6.1. </span>Create encrypted files<a class="headerlink" href="#create-encrypted-files" title="Link to this heading"></a></h2>
+<p>The command below will create a temporary file and subsequentially
+open it for you to write. Once the file is saved, and the text editor closed,
+<em>ansible-vault</em> will automatically generate an encrypted version of it and erase
+the original.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-vault<span class="w"> </span>--vault-id<span class="w"> </span>&lt;env&gt;@&lt;vault-password<span class="w"> </span>script&gt;<span class="w"> </span>create<span class="w"> </span>&lt;file&gt;
+</pre></div>
+</div>
+</div></blockquote>
+<p>Alternatively, if you intend to be prompted for the password, then:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># You could also use:</span>
+<span class="c1"># ansible-vault create &lt;file&gt;</span>
+<span class="c1"># However, environments would not be taked into consideration.</span>
+ansible-vault<span class="w"> </span>--vault-id<span class="w"> </span>&lt;env&gt;@prompt<span class="w"> </span>create<span class="w"> </span>&lt;file&gt;
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="encrypt-files">
+<h2><span class="section-number">6.2. </span>Encrypt files<a class="headerlink" href="#encrypt-files" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-vault<span class="w"> </span>--vault-id<span class="w"> </span>&lt;env&gt;@&lt;vault-password<span class="w"> </span>script&gt;<span class="w"> </span>encrypt<span class="w"> </span>&lt;file-1&gt;<span class="w"> </span><span class="o">[</span>file-2<span class="w"> </span>file-3<span class="w"> </span>...<span class="w"> </span>file-n<span class="o">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="encrypt-variables-as-a-string">
+<h2><span class="section-number">6.3. </span>Encrypt variables as a string<a class="headerlink" href="#encrypt-variables-as-a-string" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-vault<span class="w"> </span>encrypt_string<span class="w"> </span>--vault-id<span class="w"> </span>&lt;env&gt;@&lt;vault-password<span class="w"> </span>script&gt;<span class="w"> </span>--stdin-name<span class="w"> </span><span class="s1">&#39;&lt;varname&gt;&#39;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="edit-encrypted-files">
+<h2><span class="section-number">6.4. </span>Edit encrypted files<a class="headerlink" href="#edit-encrypted-files" title="Link to this heading"></a></h2>
+<p>Encrypted files can be edited without being decrypted a priori. See the command below:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-vault<span class="w"> </span>--vault-id<span class="w"> </span>&lt;env&gt;@&lt;vault-password<span class="w"> </span>script&gt;<span class="w"> </span>edit<span class="w"> </span>&lt;file&gt;
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="view-encrypted-file">
+<h2><span class="section-number">6.5. </span>View encrypted file<a class="headerlink" href="#view-encrypted-file" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-vault<span class="w"> </span>--vault-id<span class="w"> </span>&lt;env&gt;@&lt;vault-password<span class="w"> </span>script&gt;<span class="w"> </span>view<span class="w"> </span>&lt;file&gt;
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="view-encrypted-string">
+<h2><span class="section-number">6.6. </span>View encrypted string<a class="headerlink" href="#view-encrypted-string" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible<span class="w"> </span>localhost<span class="w"> </span>-m<span class="w"> </span>debug<span class="w"> </span>-a<span class="w"> </span><span class="nv">var</span><span class="o">=</span><span class="s1">&#39;&lt;variable_to_decrypt&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+-e<span class="w"> </span><span class="s2">&quot;@&lt;file_containing_variable&gt;&quot;</span><span class="w"> </span><span class="se">\</span>
+--vault-id<span class="w"> </span>&lt;env&gt;@&lt;vault-password<span class="w"> </span>script&gt;
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="decrypt-files">
+<h2><span class="section-number">6.7. </span>Decrypt files<a class="headerlink" href="#decrypt-files" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-vault<span class="w"> </span>--vault-id<span class="w"> </span>&lt;env&gt;@&lt;vault-password<span class="w"> </span>script&gt;<span class="w"> </span>decrypt<span class="w"> </span>&lt;file-1&gt;<span class="w"> </span><span class="o">[</span>file-2<span class="w"> </span>file-3<span class="w"> </span>...<span class="w"> </span>file-n<span class="o">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="change-encryption-key">
+<h2><span class="section-number">6.8. </span>Change encryption key<a class="headerlink" href="#change-encryption-key" title="Link to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-vault<span class="w"> </span>rekey<span class="w"> </span>&lt;file-1&gt;<span class="w"> </span><span class="o">[</span>file-2<span class="w"> </span>file-3<span class="w"> </span>...<span class="w"> </span>file-n<span class="o">]</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="vault-password-script">
+<h2><span class="section-number">6.9. </span>vault-password script<a class="headerlink" href="#vault-password-script" title="Link to this heading"></a></h2>
+<p>Vault’s password can be retrieved from a script, as described in <a class="footnote-reference brackets" href="#two" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a>, passed to the
+option <code class="code highlight bash docutils literal highlight-bash">--vault-id</code>, or <code class="code highlight bash docutils literal highlight-bash">--vault-password-file</code>
+from the <code class="code highlight bash docutils literal highlight-bash">ansible-vault</code> and <code class="code highlight bash docutils literal highlight-bash">ansible-playbook</code> executables.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The script can be written in python, bash or any other scripting language.</p>
+</div>
+<p>Scripts invoked by <code class="code highlight bash docutils literal highlight-bash">--vault-password-file</code> take no arguments,
+return the password on stdout and do not have any knowledge about <code class="code highlight bash docutils literal highlight-bash">--vault-id</code>
+or multiple password files whatsoever. Using <code class="code highlight bash docutils literal highlight-bash">--vault-id</code> to call upon
+scripts, on the other hand, enables a ‘protocol’ under which a vault id can be
+looked up and its associated password returned thereafter.</p>
+<p>Furthermore, <code class="code highlight bash docutils literal highlight-bash">--vault-id</code> allows for a vault id to be passed a
+as an argument thus giving developers the ability to
+program more sophisticated vault-password scripts.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>A vault id will only be passed to the script if the latter is named after the
+convention <code class="code highlight bash docutils literal highlight-bash">&lt;some<span class="w"> </span>name&gt;-client.&lt;extension&gt;</code> (e.g. <code class="code highlight bash docutils literal highlight-bash">keyring-client.sh</code>).
+See <a class="footnote-reference brackets" href="#three" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a> and <a class="footnote-reference brackets" href="#four" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> for more information.</p></li>
+<li><p>Make sure the script is executable. Otherwise, ansible will not be able
+to use it.</p></li>
+</ul>
+</div>
+<p>For instance,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-playbook<span class="w"> </span>--vault-id<span class="w"> </span>some_id@/path/to/keyring-client.sh<span class="w"> </span>some_playbook.yml
+</pre></div>
+</div>
+<p>will result in <code class="code highlight bash docutils literal highlight-bash">keyring-client.sh</code> to be invoked as:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/path/to/keyring-client.sh<span class="w"> </span>--vault-id<span class="w"> </span>some_id
+</pre></div>
+</div>
+<p>Let us delve into a more detailed example:</p>
+<p><strong>Assumptions</strong></p>
+<ol class="arabic">
+<li><p>Ansible is being run from
+three clusters.Cluster orchestrators (masters) are
+named after the convention <code class="code highlight bash docutils literal highlight-bash">cluster&lt;cluster<span class="w"> </span>number&gt;.&lt;domain&gt;</code> and
+compute nodes <code class="code highlight bash docutils literal highlight-bash">compute&lt;cluster<span class="w"> </span>number&gt;-&lt;number&gt;</code>. e.g. Cluster 1
+is comprised of <code class="code highlight bash docutils literal highlight-bash">cluster1.local</code> and  <code class="code highlight bash docutils literal highlight-bash">compute-1-0.local</code>,
+<code class="code highlight bash docutils literal highlight-bash">compute-1-1.local</code>.</p></li>
+<li><p>Clusters 1 and 2 belong to the production environment. Cluster 3 belongs to
+the development environment.</p></li>
+<li><p>Servers from a particular cluster cannot access servers from other
+cluster.</p></li>
+<li><p>The script <code class="code highlight bash docutils literal highlight-bash">/usr/sbin/keyring-client.sh</code> has the content shown below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="ch">#!/bin/bash</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="k">case</span><span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="k">in</span>
+<span class="linenos"> 4</span><span class="w">  </span><span class="s2">&quot;--vault-id&quot;</span><span class="o">)</span>
+<span class="linenos"> 5</span><span class="w">  </span><span class="nb">declare</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">env</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">&quot;</span>
+<span class="linenos"> 6</span><span class="w">  </span><span class="p">;;</span>
+<span class="linenos"> 7</span>*<span class="o">)</span>
+<span class="linenos"> 8</span><span class="w">  </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="linenos"> 9</span><span class="w">  </span><span class="p">;;</span>
+<span class="linenos">10</span><span class="k">esac</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="nb">declare</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">cluster</span><span class="o">=</span><span class="sb">`</span>hostname<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span>-F<span class="s1">&#39;.&#39;</span><span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="sb">`</span>
+<span class="linenos">13</span><span class="nb">declare</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">cmd</span><span class="o">=</span><span class="s2">&quot;ssh remote \</span>
+<span class="linenos">14</span><span class="s2">cat /etc/secrets/</span><span class="nv">$env</span><span class="s2">/</span><span class="nv">$cluster</span><span class="s2">&quot;</span>
+<span class="linenos">15</span>
+<span class="linenos">16</span><span class="nb">declare</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">vault_passwd</span><span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nv">$cmd</span><span class="k">)</span><span class="s2">&quot;</span>
+<span class="linenos">17</span>
+<span class="linenos">18</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$vault_passwd</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>The vault id reprents an environment: dev (development), prod (production).</p></li>
+<li><p>A server called <code class="code highlight bash docutils literal highlight-bash">remote</code> (see line 13 from script) holds multiple passwords,
+one per cluster, stored under <code class="code highlight bash docutils literal highlight-bash">/etc/secrets/&lt;environment&gt;/&lt;cluster&gt;</code>:</p>
+<ul class="simple">
+<li><p><code class="code highlight bash docutils literal highlight-bash">/etc/secrets/prod/cluster1</code></p></li>
+<li><p><code class="code highlight bash docutils literal highlight-bash">/etc/secrets/prod/cluster2</code></p></li>
+<li><p><code class="code highlight bash docutils literal highlight-bash">/etc/secrets/dev/cluster3</code></p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Sample use case</strong></p>
+<ol class="arabic">
+<li><p>Create a git repository to hold ansible’s information.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ansible
+<span class="nb">cd</span><span class="w"> </span>~/ansible
+git<span class="w"> </span>init
+</pre></div>
+</div>
+</li>
+<li><p>Create an inventory file.</p>
+<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="c1">; ~/ansible/inventory</span>
+
+<span class="k">[cluster1]</span>
+<span class="na">cluster1.local</span>
+<span class="na">compute-1-0.local</span>
+<span class="na">compute-1-1.local</span>
+
+<span class="k">[cluster2]</span>
+<span class="na">cluster2.local</span>
+<span class="na">compute-2-0.local</span>
+<span class="na">compute-2-1.local</span>
+
+<span class="k">[cluster3]</span>
+<span class="na">cluster3.local</span>
+<span class="na">compute-3-0.local</span>
+<span class="na">compute-3-1.local</span>
+
+<span class="k">[clusters]</span>
+<span class="na">cluster1</span>
+<span class="na">cluster2</span>
+<span class="na">cluster3</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create a playbook to change the root password. Since repeating code is an awful
+practice, we decided to create a reusable task and manage the user password
+through a variable.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ~/ansible/playbook.yml</span>
+<span class="nn">---</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">hosts</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">clusters</span>
+<span class="w">  </span><span class="nt">tasks</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set root password</span>
+<span class="w">    </span><span class="nt">user</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root</span>
+<span class="w">      </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;{{</span><span class="nv"> </span><span class="s">root_password_hash</span><span class="nv"> </span><span class="s">}}&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Retrive each root password hash.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Password - cluster1: 123</span>
+openssl<span class="w"> </span>passwd<span class="w"> </span>-1<span class="w"> </span>-salt
+Password:
+Verifying<span class="w"> </span>-<span class="w"> </span>Password:
+<span class="nv">$1$PpScqWH9</span>$/Rpsq9/mJVxnaCEmrSAv31
+<span class="c1"># Password - cluster2: 456</span>
+openssl<span class="w"> </span>passwd<span class="w"> </span>-1<span class="w"> </span>-salt
+Password:
+Verifying<span class="w"> </span>-<span class="w"> </span>Password:
+<span class="nv">$1$RB</span>/C07h4<span class="nv">$t1lWpEQO</span>/APEBwYPyhjai1
+<span class="c1"># Password - cluster3: 789</span>
+openssl<span class="w"> </span>passwd<span class="w"> </span>-1<span class="w"> </span>-salt
+Password:
+Verifying<span class="w"> </span>-<span class="w"> </span>Password:
+<span class="nv">$1$mRBrUoTy$xAoiS8xIeT6pm8HZZvKmL1</span>
+</pre></div>
+</div>
+</li>
+<li><p>Encrypt the hashes using the vault-password
+script. Note the process is exactly the same for all
+servers (login, run ansible-vault, paste hash, press Ctrl-d, retrieve hash),
+therefore showing it for one will be enough of a clarification.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<ul class="simple">
+<li><p>DO NOT underestimate string trimming. That is, Vault does not
+trim any \n. Hence, pasting the hash, pressing [Return] and then
+[Ctrl]-[d] would include an EOL.</p></li>
+<li><p>Remember to give Vault’s –vault-id option the apropriate
+environment for each server.</p></li>
+</ul>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>cluster1.local
+ansible-vault<span class="w"> </span>encrypt_string<span class="w"> </span><span class="se">\</span>
+--vault-id<span class="w"> </span>prod@/usr/sbin/keyring-client.sh<span class="w"> </span><span class="se">\</span>
+--stdin-name<span class="w"> </span><span class="s1">&#39;root_password_hash&#39;</span>
+Reading<span class="w"> </span>plaintext<span class="w"> </span>input<span class="w"> </span>from<span class="w"> </span>stdin.<span class="w"> </span><span class="o">(</span>ctrl-d<span class="w"> </span>to<span class="w"> </span>end<span class="w"> </span>input<span class="o">)</span>
+<span class="nv">$1$PpScqWH9</span>$/Rpsq9/mJVxnaCEmrSAv31root_password_hash:<span class="w"> </span>!vault<span class="w"> </span><span class="p">|</span>
+<span class="w">    </span><span class="nv">$ANSIBLE_VAULT</span><span class="p">;</span><span class="m">1</span>.2<span class="p">;</span>AES256<span class="p">;</span>prod
+<span class="w">    </span><span class="m">34376666646335616561643965613763613163623262663262313961613262316565623237363434</span>
+<span class="w">    </span>6138363635336330616364633539653466323264653133330a326465346136383635343961346434
+<span class="w">    </span><span class="m">66376665356534616366333465346166633364373438623133623363303262343464663266623337</span>
+<span class="w">    </span>6136363864643936620a373734656435376331393265653138613835336237636437656666663361
+<span class="w">    </span><span class="m">66636130613232383766656134306566353562333166323164663731623238353430633830343833</span>
+<span class="w">    </span><span class="m">6131643734643639383332613635323264363065316464366232</span>
+Encryption<span class="w"> </span>successful
+<span class="nb">exit</span>
+</pre></div>
+</div>
+</li>
+<li><p>Create the group variable <code class="code highlight bash docutils literal highlight-bash">root_password_hash</code> and assign it the
+appropriate hash.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ansible/group_vars
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ~/ansible/group_vars/cluster1</span>
+<span class="nn">---</span>
+<span class="nt">root_password_hash</span><span class="p">:</span><span class="w"> </span><span class="kt">!vault</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">$ANSIBLE_VAULT;1.2;AES256;prod</span>
+<span class="w">    </span><span class="no">34376666646335616561643965613763613163623262663262313961613262316565623237363434</span>
+<span class="w">    </span><span class="no">6138363635336330616364633539653466323264653133330a326465346136383635343961346434</span>
+<span class="w">    </span><span class="no">66376665356534616366333465346166633364373438623133623363303262343464663266623337</span>
+<span class="w">    </span><span class="no">6136363864643936620a373734656435376331393265653138613835336237636437656666663361</span>
+<span class="w">    </span><span class="no">66636130613232383766656134306566353562333166323164663731623238353430633830343833</span>
+<span class="w">    </span><span class="no">6131643734643639383332613635323264363065316464366232</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ~/ansible/group_vars/cluster2</span>
+<span class="nn">---</span>
+<span class="nt">root_password_hash</span><span class="p">:</span><span class="w"> </span><span class="kt">!vault</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">$ANSIBLE_VAULT;1.2;AES256;prod</span>
+<span class="w">    </span><span class="no">&lt;encrypted hash&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># ~/ansible/group_vars/cluster3</span>
+<span class="nn">---</span>
+<span class="nt">root_password_hash</span><span class="p">:</span><span class="w"> </span><span class="kt">!vault</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">$ANSIBLE_VAULT;1.2;AES256;dev</span>
+<span class="w">    </span><span class="no">&lt;encrypted hash&gt;</span>
+</pre></div>
+</div>
+<p>Note how each vault id corresponds to the cluster’s environment, which, in this case, determines
+the script’s behavior (see figure <a class="reference internal" href="#fig-sample-vault-script-workflow"><span class="std std-ref">Sample vault script workflow</span></a>).</p>
+</li>
+<li><p>Connect the repository to Github, Gitlab or any other remote platform. Then commit and push the changes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>~/ansible
+git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>git@github.com:username/ansible
+git<span class="w"> </span>add<span class="w"> </span>--all
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;&lt;some message&gt;&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>master
+</pre></div>
+</div>
+</li>
+<li><p>Download the repository from each cluster orchestrator and run ansible.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Since clusters cannot see each other, ansible will only apply
+changes to the servers belonging to the same cluster an orchestrator
+is member of despite the existance of multiple cluster declarations
+within the inventory file. This approach, however, is not recommended
+for a production environment.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>cluster1.local
+<span class="nb">cd</span><span class="w"> </span>/etc
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:username/ansible
+ansible-playbook<span class="w"> </span>--vault-id<span class="w"> </span>prod@/usr/sbin/keyring-client.sh<span class="w"> </span><span class="se">\</span>
+-i<span class="w"> </span>/etc/ansible/inventory<span class="w"> </span><span class="se">\</span>
+/etc/ansible/site.yml
+<span class="nb">exit</span>
+
+ssh<span class="w"> </span>cluster2.local
+<span class="nb">cd</span><span class="w"> </span>/etc
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:username/ansible
+ansible-playbook<span class="w"> </span>--vault-id<span class="w"> </span>prod@/usr/sbin/keyring-client.sh<span class="w"> </span><span class="se">\</span>
+-i<span class="w"> </span>/etc/ansible/inventory<span class="w"> </span><span class="se">\</span>
+/etc/ansible/site.yml
+<span class="nb">exit</span>
+
+ssh<span class="w"> </span>cluster3.local
+<span class="nb">cd</span><span class="w"> </span>/etc
+git<span class="w"> </span>clone<span class="w"> </span>git@github.com:username/ansible
+ansible-playbook<span class="w"> </span>--vault-id<span class="w"> </span>dev@/usr/sbin/keyring-client.sh<span class="w"> </span><span class="se">\</span>
+-i<span class="w"> </span>/etc/ansible/inventory<span class="w"> </span><span class="se">\</span>
+/etc/ansible/site.yml
+<span class="nb">exit</span>
+</pre></div>
+</div>
+<p>In order to decrypt the variable <code class="code highlight bash docutils literal highlight-bash">root_password_hash</code> ansible executes <code class="code highlight bash docutils literal highlight-bash">/usr/sbin/keyring-client.sh</code>,
+which:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Acesses <code class="code highlight bash docutils literal highlight-bash">remote</code> using ssh</p></li>
+<li><p>Retrieves the appropriate password, contingent on the cluster’s name and
+environment.</p></li>
+<li><p>Prints the password to the standard output.</p></li>
+</ol>
+</div></blockquote>
+<p>The workflow depicted in the figure <a class="reference internal" href="#fig-sample-vault-script-workflow"><span class="std std-ref">Sample vault script workflow</span></a> shows what ansible will do on each
+cluster.</p>
+<figure class="align-default" id="id7">
+<span id="fig-sample-vault-script-workflow"></span><img alt="Simple vault-password script workflow" src="../../../_images/simple_vault-password_script_workflow.png" />
+<figcaption>
+<p><span class="caption-text">Sample vault script workflow</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+</ol>
+</section>
+</section>
+<section id="environments">
+<span id="sssec-ansible-envs"></span><h1><span class="section-number">7. </span>Environments<a class="headerlink" href="#environments" title="Link to this heading"></a></h1>
+<p>Environments provide a way to reuse ansible components (tasks, roles, playbooks, etc.) on
+multiple systems by maintaining different inventory files within the same project; which might also
+mean multiple <code class="code highlight bash docutils literal highlight-bash">group_vars</code> and <code class="code highlight bash docutils literal highlight-bash">host_vars</code> folders. Environments are usually
+used for testing purposes, such as verifying the integrity of
+features to be introduced in production servers.</p>
+<p>Instead of being an ansible feature, environments are more of a concept materialized on the
+project’s directory layout. Take the example from the <a class="reference internal" href="#roles">Roles</a> section:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>playbook.yml
+inventory
+group_vars/
+<span class="w">  </span>lbnorth
+<span class="w">  </span>lbsouth
+roles/
+<span class="w">  </span>nginx/
+<span class="w">    </span>tasks/
+<span class="w">      </span>packages.yml
+<span class="w">      </span>config.yml
+<span class="w">      </span>main.yml
+<span class="w">    </span>handlers/
+<span class="w">      </span>main.yml
+<span class="w">    </span>templates/
+<span class="w">      </span>/etc/nginx/conf/nginx.conf.j2
+<span class="w">    </span>vars/
+<span class="w">      </span>config.yml
+</pre></div>
+</div>
+<p>If one were to constantly update the production servers, it would be wise
+to test changes on a system replica before releasing them. In order
+to create such replica, either using a virtual or physical machine,
+one must ensure equivalent operations to be applied over
+the testing servers, thus compelling them to become alike to their
+production counterparts. This is accomplished by reusing the
+entire project, but running ansible against different inventory files
+on each system:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>playbook.yml
+<span class="hll"><span class="linenos"> 2</span>environments/
+</span><span class="hll"><span class="linenos"> 3</span><span class="w">  </span>production/
+</span><span class="hll"><span class="linenos"> 4</span><span class="w">    </span>inventory
+</span><span class="hll"><span class="linenos"> 5</span><span class="w">    </span>group_vars/
+</span><span class="hll"><span class="linenos"> 6</span><span class="w">  </span>development/
+</span><span class="hll"><span class="linenos"> 7</span><span class="w">    </span>inventory
+</span><span class="hll"><span class="linenos"> 8</span><span class="w">    </span>group_vars/
+</span><span class="linenos"> 9</span>group_vars/
+<span class="linenos">10</span><span class="w">  </span>lbnorth
+<span class="linenos">11</span><span class="w">  </span>lbsouth
+<span class="linenos">12</span>roles/
+<span class="linenos">13</span><span class="w">  </span>nginx/
+<span class="linenos">14</span><span class="w">    </span>tasks/
+<span class="linenos">15</span><span class="w">      </span>packages.yml
+<span class="linenos">16</span><span class="w">      </span>config.yml
+<span class="linenos">17</span><span class="w">      </span>main.yml
+<span class="linenos">18</span><span class="w">    </span>handlers/
+<span class="linenos">19</span><span class="w">      </span>main.yml
+<span class="linenos">20</span><span class="w">    </span>templates/
+<span class="linenos">21</span><span class="w">      </span>/etc/nginx/conf/nginx.conf.j2
+<span class="linenos">22</span><span class="w">    </span>vars/
+<span class="linenos">23</span><span class="w">      </span>config.yml
+</pre></div>
+</div>
+<ul>
+<li><p>For production servers</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-playbook<span class="w"> </span>-i<span class="w"> </span><span class="nv">$ANSIBLE_HOME</span>/environments/production/inventory<span class="w"> </span><span class="se">\</span>
+<span class="nv">$ANSIBLE_HOME</span>/playbook.yml
+</pre></div>
+</div>
+</li>
+<li><p>For testing servers</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ansible-playbook<span class="w"> </span>-i<span class="w"> </span><span class="nv">$ANSIBLE_HOME</span>/environments/development/inventory<span class="w"> </span><span class="se">\</span>
+<span class="nv">$ANSIBLE_HOME</span>/playbook.yml
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Control over tasks is done by employing variables, tags and/or other metaparameters.
+Ansible will load variables from the specified environment, expand them and run
+tasks accordingly, as depicted in figure <a class="reference internal" href="#fig-simple-multienv-activity-diagram"><span class="std std-ref">Simple multi-environment activity diagram</span></a>.</p>
+<figure class="align-default" id="id8">
+<span id="fig-simple-multienv-activity-diagram"></span><img alt="Simple multi-environment activity diagram" src="../../../_images/simple_multienv_activity_diagram.png" />
+<figcaption>
+<p><span class="caption-text">Simple multi-environment activity diagram</span><a class="headerlink" href="#id8" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p class="rubric">References</p>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="one" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>Ansible Vault, August 17 - 2018. Retrieved August 30 - 2018, from <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/vault.html?highlight=vault">https://docs.ansible.com/ansible/latest/user_guide/vault.html?highlight=vault</a></p>
+</aside>
+<aside class="footnote brackets" id="two" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Ansible Vault, Providing Vault Passwords, August 17 - 2018. Retrieved August 30 - 2018, from <a class="reference external" href="https://docs.ansible.com/ansible/latest/user_guide/vault.html?highlight=vault#providing-vault-passwords">https://docs.ansible.com/ansible/latest/user_guide/vault.html?highlight=vault#providing-vault-passwords</a>.</p>
+</aside>
+<aside class="footnote brackets" id="three" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
+<p>Issue: Allow the vault_id to be passed to vault password scripts #31001, September 27 - 2018. Retrieved Retrieved August 30 - 2018, from <a class="reference external" href="https://github.com/ansible/ansible/issues/31001">https://github.com/ansible/ansible/issues/31001</a></p>
+</aside>
+<aside class="footnote brackets" id="four" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">4</a><span class="fn-bracket">]</span></span>
+<p>Vault secrets client inc new ‘keyring’ client #27669, October 13 - 2018. Retrieved August 30 - 2018, from <a class="reference external" href="https://github.com/ansible/ansible/pull/27669">https://github.com/ansible/ansible/pull/27669</a></p>
+</aside>
+<aside class="footnote brackets" id="five" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">5</a><span class="fn-bracket">]</span></span>
+<p>Using Roles, September 06 - 2018. Retrieved September 06 - 2018, from <a class="reference external" href="https://docs.ansible.com/ansible/2.5/user_guide/playbooks_reuse_roles.html#using-roles">https://docs.ansible.com/ansible/2.5/user_guide/playbooks_reuse_roles.html#using-roles</a></p>
+</aside>
+</aside>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Ansible" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="dynamic_control.html" class="btn btn-neutral float-right" title="1. Tags" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
