@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CUDA-8.0 &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="How to Acknowledge" href="../../../../how-to-acknowledge.html" />
+    <link rel="prev" title="CUDA Multi-Process Service (MPS)" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../../../../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../virtualization/index.html">Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programminglanguages/index.html">Programming Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../applications/index.html">Scientific Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../managementsoftware/index.html">Management Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../provisioning/index.html">Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../monitoring/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../operatingsystems/index.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../scientific_libraries/index.html">Scientific Libraries</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Accelerators</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">CUDA Multi-Process Service (MPS)</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">CUDA-8.0</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Software</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Accelerators</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">CUDA Multi-Process Service (MPS)</a></li>
+      <li class="breadcrumb-item active">CUDA-8.0</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/software/accelerators/cuda-mps/8.0/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cuda-8-0">
+<span id="id1"></span><h1><a class="toc-backref" href="#id4" role="doc-backlink">CUDA-8.0</a><a class="headerlink" href="#cuda-8-0" title="Link to this heading"></a></h1>
+<nav class="contents" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#cuda-8-0" id="id4">CUDA-8.0</a></p>
+<ul>
+<li><p><a class="reference internal" href="#basic-information" id="id5">Basic information</a></p></li>
+<li><p><a class="reference internal" href="#dependencies-and-instalation" id="id6">Dependencies and Instalation</a></p></li>
+<li><p><a class="reference internal" href="#activation" id="id7">Activation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#daemon-initiation-and-single-server" id="id8">Daemon initiation and single server</a></p></li>
+<li><p><a class="reference internal" href="#initiation-of-multiple-daemons-and-multiple-servers" id="id9">Initiation of multiple daemons and multiple servers</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#detention" id="id10">Detention</a></p>
+<ul>
+<li><p><a class="reference internal" href="#stopping-the-daemon-and-a-single-server" id="id11">Stopping the daemon and a single server</a></p></li>
+<li><p><a class="reference internal" href="#stopping-multiple-daemons-and-multiple-servers" id="id12">Stopping multiple daemons and multiple servers</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#how-to-use" id="id13">How to Use</a></p></li>
+<li><p><a class="reference internal" href="#troubleshooting" id="id14">Troubleshooting</a></p>
+<ul>
+<li><p><a class="reference internal" href="#mps-cannot-reserve-memory-at-startup" id="id15">MPS cannot reserve memory at startup</a></p>
+<ul>
+<li><p><a class="reference internal" href="#process" id="id16">Process</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#mps-processes-change-their-status-to-zombie-after-stopping-the-service" id="id17">MPS processes change their status to “Zombie” after stopping the service</a></p></li>
+<li><p><a class="reference internal" href="#gpu-has-problems-after-disabling-mps" id="id18">GPU has problems after disabling MPS</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#links" id="id19">Links</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id20">References</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="basic-information">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Basic information</a><a class="headerlink" href="#basic-information" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Instalation Date:</strong> 16/06/2017</p></li>
+<li><p><strong>Official name:</strong> CUDA Multi-Process Service (MPS)</p></li>
+<li><p><strong>Apolo version:</strong> Apolo II</p></li>
+</ul>
+</section>
+<section id="dependencies-and-instalation">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Dependencies and Instalation</a><a class="headerlink" href="#dependencies-and-instalation" title="Link to this heading"></a></h2>
+<p>After compiling and building the driver for a compatible nvidia accelerator, it is required to install the toolkit for
+the CUDA parallel computing platform. This installation will create in the /usr/bin/ directory the executables
+<strong>nvidia-cuda-mps-control</strong> and <strong>nvidia-cuda-mps-server</strong>.</p>
+<p>Both files must be present before enabling the service for use.</p>
+</section>
+<section id="activation">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Activation</a><a class="headerlink" href="#activation" title="Link to this heading"></a></h2>
+<p>The activation of the service is performed by executing nvidia-cuda-mps-control, which uses the environment variables CUDA_VISIBLE_DEVICES,
+CUDA_MPS_PIPE_DIRECTORY and CUDA_MPS_LOG_DIRECTORY to determine the configuration to be used at runtime. The table found below explains in detail
+the meaning of each one:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head" rowspan="2"><p>Hostname</p></th>
+<th class="head" rowspan="2"><p>IP address</p></th>
+</tr>
+<tr class="row-even"></tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td rowspan="3"><p>CUDA_VISIBLE_DEVICES</p></td>
+<td rowspan="3"><p>It is used to specify which GPU will be visible to a CUDA application. The variable can contain
+positive integer values (separated by commas) starting with the number zero (0).</p></td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"><td rowspan="3"><p>CUDA_MPS_PIPE_DIRECTORY</p></td>
+<td rowspan="3"><p>The different MPS clients communicate through named pipes located by default in the
+/tmp/nvidia-mps directory, which can be modified by assigning a different path to this variable.</p></td>
+</tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"><td rowspan="7"><p>CUDA_MPS_LOG_DIRECTORY</p></td>
+<td rowspan="7"><p>The MPS service control daemon uses the control.log file to record the status of the MPS
+servers, commands executed by a user as well as their output, and starting and stopping
+information for the daemon. The MPS server maintains the log server.log, where it stores data
+about its startup, shutdown and status of each client. Both are stored by default in the
+/var/log/nvidia-mps directory, which can be modified by assigning a different path to this
+variable.</p></td>
+</tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"></tr>
+<tr class="row-even"></tr>
+<tr class="row-odd"></tr>
+</tbody>
+</table>
+<section id="daemon-initiation-and-single-server">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Daemon initiation and single server</a><a class="headerlink" href="#daemon-initiation-and-single-server" title="Link to this heading"></a></h3>
+<p>By using the /var/log/nvidia-mps directory to store the activity logs, both the daemon and the MPS server restrict the use
+of the service to the root user, since the permissions on the /var path make it impossible for other users access its content.
+In order to start the daemon and the server without requiring the intervention of a superuser, it is necessary to use the
+environment variables described above as illustrated in the following example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>mkdir<span class="w"> </span>/tmp/mps_0
+$<span class="w"> </span>mkdir<span class="w"> </span>/tmp/mps_log_0
+$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">0</span>
+$<span class="w"> </span><span class="nb">export</span><span class="w">  </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_0
+$<span class="w"> </span><span class="nb">export</span><span class="w">  </span><span class="nv">CUDA_MPS_LOG_DIRECTORY</span><span class="o">=</span>/tmp/mps_log_0
+$<span class="w"> </span>nvidia-cuda-mps-control<span class="w"> </span>-d
+</pre></div>
+</div>
+<p>The use of CUDA_MPS_PIPE_DIRECTORY is optional, since the default path is accessible to all
+users of the system; while CUDA_MPS_LOG_DIRECTORY must contain a path in which the user seeking to start the service has read and
+write permissions</p>
+</section>
+<section id="initiation-of-multiple-daemons-and-multiple-servers">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Initiation of multiple daemons and multiple servers</a><a class="headerlink" href="#initiation-of-multiple-daemons-and-multiple-servers" title="Link to this heading"></a></h3>
+<p>When having multiple nvidia accelerators, a daemon and an MPS server must be activated for each one. With this, and assuming
+that we have two accelerators, the structure described in the example in the section “Daemon initiation and a single server”
+must be transformed as follows:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">NGPUS</span><span class="o">=</span><span class="m">2</span>
+
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span>&lt;<span class="w"> </span><span class="nv">$NGPUS</span><span class="p">;</span><span class="w"> </span>++i<span class="w">  </span><span class="o">))</span>
+<span class="k">do</span>
+<span class="w">    </span>mkdir<span class="w"> </span>/tmp/mps_<span class="nv">$i</span>
+<span class="w">    </span>mkdir<span class="w"> </span>/tmp/mps_log_<span class="nv">$i</span>
+
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="nv">$i</span>
+<span class="w">    </span><span class="nb">export</span><span class="w">  </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span><span class="s2">&quot;/tmp/mps_</span><span class="nv">$i</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">export</span><span class="w">  </span><span class="nv">CUDA_MPS_LOG_DIRECTORY</span><span class="o">=</span><span class="s2">&quot;/tmp/mps_</span><span class="nv">$i</span><span class="s2">&quot;</span>
+
+<span class="w">    </span>nvidia-cuda-mps-control<span class="w"> </span>-d
+<span class="k">done</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ul class="simple">
+<li><p>It is necessary to clarify that this procedure is functional if and only if the cards are in the same node, where it is feasible for
+the nvidia driver to assign an id to each accelerator.</p></li>
+<li><p>Certain GPUs, such as the Tesla K80, internally contain two different graphics processing cards, each one being recognized as independent
+by the controller. In these controllers the procedure described in this section must be used to start the MPS service.</p></li>
+</ul>
+</section>
+</section>
+<section id="detention">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Detention</a><a class="headerlink" href="#detention" title="Link to this heading"></a></h2>
+<section id="stopping-the-daemon-and-a-single-server">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Stopping the daemon and a single server</a><a class="headerlink" href="#stopping-the-daemon-and-a-single-server" title="Link to this heading"></a></h3>
+<p>The stopping process requires that the environment variables used by the MPS daemon during service initialization retain their value.
+Returning to the example of the subsection “Initiating the daemon and a single server”, stopping the service should be carried out as follows:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">0</span>
+$<span class="w"> </span><span class="nb">export</span><span class="w">  </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_0
+$<span class="w"> </span><span class="nb">export</span><span class="w">  </span><span class="nv">CUDA_MPS_LOG_DIRECTORY</span><span class="o">=</span>/tmp/mps_log_0
+$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;quit&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>nvidia-cuda-mps-control
+</pre></div>
+</div>
+</section>
+<section id="stopping-multiple-daemons-and-multiple-servers">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Stopping multiple daemons and multiple servers</a><a class="headerlink" href="#stopping-multiple-daemons-and-multiple-servers" title="Link to this heading"></a></h3>
+<p>Taking the explanation from the section “Starting multiple daemons and multiple servers”, it is feasible to conclude that when
+starting a server for each card present it is necessary to stop them individually, as well as their respective daemons,
+using nvidia-cuda-mps-control. Taking the example from the section “Stopping the daemon and a single server” and assuming that
+you have two cards, the basic structure of a script to stop the MPS service would be:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">NGPUS</span><span class="o">=</span><span class="m">2</span>
+
+<span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span>&lt;<span class="w"> </span><span class="nv">$NGPUS</span><span class="p">;</span><span class="w"> </span>++i<span class="w"> </span><span class="o">))</span>
+<span class="k">do</span>
+<span class="w">    </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span><span class="s2">&quot;/tmp/mps_</span><span class="nv">$i</span><span class="s2">&quot;</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;quit&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>nvidia-cuda-mps-control
+<span class="w">    </span>rm<span class="w"> </span>-fr<span class="w"> </span>/tmp/mps_<span class="nv">$i</span>
+<span class="w">    </span>rm<span class="w"> </span>-fr<span class="w"> </span>/tmp/mps_log_<span class="nv">$i</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="how-to-use">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">How to Use</a><a class="headerlink" href="#how-to-use" title="Link to this heading"></a></h2>
+<p>Once the service is activated, it can be used by two types of applications:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Those whose dependence on CUDA is not linked to MPI.</p></li>
+<li><p>Those that run using MPI</p></li>
+</ol>
+</div></blockquote>
+<p>In the former, it is enough to define the card on which the program will be executed through the assignment of the
+variable CUDA_VISIBLE_DEVICES, while the latter require the creation of a script that uses the variable CUDA_MPS_PIPE_DIRECTORY to
+indicate to the service which MPI process it will carry out. your instructions based on which server. The structure of this script is explained below:</p>
+<blockquote>
+<div><ul>
+<li><p>Initially, it is necessary to obtain the identifier of each MPI process, so that all can be distributed equally on the activated MPS servers;
+This identifier is known as rank according to the MPI standard and is stored in an environment variable, whose name may vary depending on the MPI
+implementation used: openmpi, mpich, mvapich, etc. The example illustrated below makes use of the variable OMPI_COMM_WORLD_LOCAL_RANK belonging to openmpi:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">lrank</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$OMPI_COMM_WORLD_LOCAL_RANK</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>After obtaining the identifier of each process, it is necessary to define the value of the variable CUDA_MPS_PIPE_DIRECTORY, ensuring that the distribution
+carried out is the same on each MPS server. The example illustrated below assumes that the maximum number of processes to use is four (4), the system has
+two cards and the directories where the named pipes used by each MPS server are located correspond to those described throughout the section Activation:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="k">case</span><span class="w"> </span><span class="si">${</span><span class="nv">lrank</span><span class="si">}</span><span class="w"> </span><span class="k">in</span>
+<span class="w">    </span><span class="o">[</span><span class="m">0</span><span class="o">])</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_0
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">    </span><span class="o">[</span><span class="m">1</span><span class="o">])</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_1
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">    </span><span class="o">[</span><span class="m">2</span><span class="o">])</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_0
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">    </span><span class="o">[</span><span class="m">3</span><span class="o">])</span>
+<span class="w">        </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_1
+<span class="w">        </span><span class="p">;;</span>
+<span class="k">esac</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Finally, the program from which each of the MPI processes will be created is executed.</p></li>
+</ul>
+</div></blockquote>
+<p>An example of the correct way of running a program that uses MPI and benefits from the MPS service is illustrated below.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cat<span class="w"> </span>mps_runnable.sh
+
+<span class="w">    </span><span class="c1">#!/bin/bash</span>
+
+<span class="w">    </span><span class="nv">lrank</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$OMPI_COMM_WORLD_LOCAL_RANK</span><span class="s2">&quot;</span>
+
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="si">${</span><span class="nv">lrank</span><span class="si">}</span><span class="w"> </span><span class="k">in</span>
+<span class="w">        </span><span class="o">[</span><span class="m">0</span><span class="o">])</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_0
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span><span class="o">[</span><span class="m">1</span><span class="o">])</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_1
+<span class="w">        </span><span class="p">;;</span>
+<span class="w">        </span><span class="o">[</span><span class="m">2</span><span class="o">])</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_0
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">        </span><span class="o">[</span><span class="m">3</span><span class="o">])</span>
+<span class="w">            </span><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_MPS_PIPE_DIRECTORY</span><span class="o">=</span>/tmp/mps_1
+<span class="w">            </span><span class="p">;;</span>
+<span class="w">    </span><span class="k">esac</span>
+
+<span class="w">    </span>program_that_uses_gpu
+
+$<span class="w"> </span>mpirun<span class="w"> </span>-np<span class="w"> </span><span class="m">4</span><span class="w"> </span>./mps_runnable.sh
+</pre></div>
+</div>
+</section>
+<section id="troubleshooting">
+<h2><a class="toc-backref" href="#id14" role="doc-backlink">Troubleshooting</a><a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<section id="mps-cannot-reserve-memory-at-startup">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">MPS cannot reserve memory at startup</a><a class="headerlink" href="#mps-cannot-reserve-memory-at-startup" title="Link to this heading"></a></h3>
+<p>“This error (ERROR_OUT_OF_MEMORY) is associated with the reservation of virtual memory over the address range of the UVA (Unified Virtual Addressing) by
+the processes that try to run on the MPS server on the GPU.
+This error normally occurs in old operating systems, this being the case of CentOS 6.6 (Rocks 6.2), since the program in charge of making
+said reservation (prelink) causes interference problems between dynamic libraries and virtual memory reservation in the UVA address range.
+The recommendation in this case is to temporarily or permanently disable the prelink” (Taken from <a class="footnote-reference brackets" href="#id3" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>)</p>
+<section id="process">
+<h4><a class="toc-backref" href="#id16" role="doc-backlink">Process</a><a class="headerlink" href="#process" title="Link to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Enter the server where you want to run the MPS service with the root user.</p></li>
+<li><p>Edit the <strong>/etc/sysconfig/prelink</strong> file and change <strong>PRELINKING=yes</strong> to <strong>PRELINKING=no</strong></p></li>
+<li><p>Manually run the following cron: <strong>/etc/cron.daily/prelink</strong></p></li>
+</ol>
+<p>In this way the <strong>prelink</strong> will be permanently disabled.</p>
+</section>
+</section>
+<section id="mps-processes-change-their-status-to-zombie-after-stopping-the-service">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">MPS processes change their status to “Zombie” after stopping the service</a><a class="headerlink" href="#mps-processes-change-their-status-to-zombie-after-stopping-the-service" title="Link to this heading"></a></h3>
+<p>Although it is rare for this problem to occur, one of the ways to identify it is to verify the existence of a process named
+nvidia-cuda-mps whose status is shown in Z.</p>
+<p>In case of performing the process of starting and stopping the MPS service in an automated way (i.e. through a script and not directly
+in an interactive session), it is advisable to detect the existence of one or more Zombie processes as shown below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ps<span class="w"> </span>aux<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>nvidia-cuda-mps<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-v<span class="w"> </span>grep<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">declare</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">error_message</span><span class="o">=</span><span class="s2">&quot;Some error message&quot;</span>
+<span class="w">    </span>logger<span class="w"> </span><span class="nv">$error_message</span>
+<span class="w">    </span><span class="c1"># Do something like &quot;pkill -u &lt;user owning the zombies&gt;&quot;</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</section>
+<section id="gpu-has-problems-after-disabling-mps">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">GPU has problems after disabling MPS</a><a class="headerlink" href="#gpu-has-problems-after-disabling-mps" title="Link to this heading"></a></h3>
+<p>It is a rare error, the causes of which are very varied. The best way to detect it if you have an automated stopping process for the MPS service is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nvidia-smi<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="o">[</span><span class="w"> </span><span class="nv">$?</span><span class="w"> </span>-ne<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">]</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<span class="w">    </span><span class="nb">declare</span><span class="w"> </span>-r<span class="w"> </span><span class="nv">error_message</span><span class="o">=</span><span class="s2">&quot;Some error message&quot;</span>
+<span class="w">    </span>logger<span class="w"> </span><span class="nv">$error_message</span>
+<span class="w">    </span><span class="c1"># Do something</span>
+<span class="k">fi</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="links">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">Links</a><a class="headerlink" href="#links" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://on-demand.gputechconf.com/gtc/2015/presentation/S5584-Priyanka-Sah.pdf">http://on-demand.gputechconf.com/gtc/2015/presentation/S5584-Priyanka-Sah.pdf</a></p></li>
+<li><p><a class="reference external" href="http://cudamusing.blogspot.com.co/2013/07/enabling-cuda-multi-process-service-mps.html">http://cudamusing.blogspot.com.co/2013/07/enabling-cuda-multi-process-service-mps.html</a></p></li>
+<li><p><a class="reference external" href="https://docs.nvidia.com/deploy/pdf/CUDA_Multi_Process_Service_Overview.pdf">https://docs.nvidia.com/deploy/pdf/CUDA_Multi_Process_Service_Overview.pdf</a></p></li>
+<li><p><a class="reference external" href="http://www.builddesigncreate.com/index.cgi?mode=page_details&amp;pageid=2011080413332724848">http://www.builddesigncreate.com/index.cgi?mode=page_details&amp;pageid=2011080413332724848</a></p></li>
+</ul>
+</section>
+<section id="references">
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
+<p>nvidia, “MULTI-PROCESS SERVICE”, Mayo del 2015, <a class="reference external" href="https://docs.nvidia.com/deploy/pdf/CUDA_Multi_Process_Service_Overview.pdf">https://docs.nvidia.com/deploy/pdf/CUDA_Multi_Process_Service_Overview.pdf</a>. Last accessed July 11, 2017</p>
+</aside>
+</aside>
+<p class="rubric">Authors</p>
+<ul class="simple">
+<li><p>Tomás Felipe Llano Ríos</p></li>
+<li><p>Mateo Gómez-Zuluaga</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="CUDA Multi-Process Service (MPS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../../../how-to-acknowledge.html" class="btn btn-neutral float-right" title="How to Acknowledge" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

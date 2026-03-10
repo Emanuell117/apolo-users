@@ -1,0 +1,607 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WRF 4.1.1 Installation &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="WRF 4.2" href="../4.2/index.html" />
+    <link rel="prev" title="WRF 4.1.1 Dependencies" href="installation-dependencies.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../../../../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../gettingstarted/index.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">Software</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../virtualization/index.html">Virtualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../programminglanguages/index.html">Programming Languages</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">Scientific Applications</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../abyss/index.html">ABySS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ansys/index.html">ANSYS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arcs/index.html">ARCS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoDock/index.html">AutoDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../autoDock_Vina/index.html">autoDock_Vina</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../bayescan/index.html">BayeScan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../BEAST2/index.html">BEAST2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../BLAST/index.html">BLAST</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../blat/index.html">BLAT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../bowtie2/index.html">bowtie2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Bpp/index.html">Bpp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../BWA/index.html">BWA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../CDO/index.html">CDO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../CHARMM/index.html">CHARMM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Calculix/index.html">Calculix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../clustalw/index.html">Clustalw</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../crystal/index.html">crystal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../curl/index.html">Curl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Cufflinks/index.html">Cufflinks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../delft3D/index.html">delft3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../DL_POLY_Classic/index.html">DL_POLY_Classic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../edge_pro/index.html">EDGE-pro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../elmer/index.html">elmer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../fastQC/index.html">fastQC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gamess/index.html">gamess</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../garli/index.html">garli</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gatk4/index.html">GATK4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gromacs/index.html">GROMACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gromacs-ls/index.html">GROMACS-LS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gurobi/index.html">gurobi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../iqtree/index.html">IQ-TREE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../kraken/index.html">Kraken</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ioapi/index.html">IOAPI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lammps/index.html">LAMMPS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../leDock/index.html">leDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lePro/index.html">lePro</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../links/index.html">LINKS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lotos_euros/index.html">Lotos Euros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mafft/index.html">MAFFT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mdstress-lib/index.html">MDSTRESS-LIB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../MedeA/index.html">MedeA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mothur/index.html">Mothur</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mpich/index.html">MPICH</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mrBayes/index.html">mrBayes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../MUSCLE/index.html">MUSCLE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../namd/index.html">NAMD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ncl/index.html">ncl</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../NCAR-ncl/index.html">NCAR NCL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../OpenFOAM/index.html">OpenFOAM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../openquake/index.html">OpenQuake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../opensees/index.html">OpenSees</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ost/index.html">Openstructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pargenes/index.html">ParGenes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../partitionFinder/index.html">Partition Finder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../phylonet/index.html">PhyloNet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../picrust2/index.html">PICRUSt2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pigz/index.html">Pigz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plumed/index.html">Plumed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prank/index.html">Prank</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../prinseq-lite/index.html">Prinseq-lite</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pteros/index.html">Pteros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../pyrad/index.html">pyrad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../QE/index.html">QE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../qiime2/index.html">Qiime2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../raxml/index.html">RAxML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../rDock/index.html">rDock</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../repet/index.html">REPET</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SAMtools/index.html">SAMtools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../SMOKE/index.html">SMOKE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../sparsehash/index.html">Google Sparsehash</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../stacks/index.html">stacks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tigmint/index.html">Tigmint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../topHat/index.html">TopHat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transabyss/index.html">Trans-ABySS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../transrate/index.html">Transrate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../trimmomatic/index.html">trimmomatic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../trinity/index.html">Trinity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../USPEX/index.html">USPEX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../VASP/index.html">VASP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vmd/index.html">VMD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vsearch/index.html">vsearch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../wps/index.html">Wps</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">WRF</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../3.7/index.html">WRF 3.7</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">WRF 4.1.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../4.2/index.html">WRF 4.2</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../makedepf90/index.html">Makedepf90</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Geant4/index.html">GEANT4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../ROOT/index.html">ROOT</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../managementsoftware/index.html">Management Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../provisioning/index.html">Provisioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../monitoring/index.html">Monitoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../operatingsystems/index.html">Operating Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../scientific_libraries/index.html">Scientific Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../accelerators/index.html">Accelerators</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Software</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Scientific Applications</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">WRF</a></li>
+          <li class="breadcrumb-item"><a href="index.html">WRF 4.1.1</a></li>
+      <li class="breadcrumb-item active">WRF 4.1.1 Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../../_sources/software/applications/wrf/4.1.1/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <aside class="sidebar" id="wrf-4-1-1-installation">
+<p class="sidebar-title">Contents</p>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#id1" id="id8">WRF 4.1.1 Installation</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tested-on-requirements" id="id9">Tested on (Requirements)</a></p></li>
+<li><p><a class="reference internal" href="#build-process" id="id10">Build process</a></p></li>
+<li><p><a class="reference internal" href="#distributed-memory-installation" id="id11">Distributed Memory Installation</a></p></li>
+<li><p><a class="reference internal" href="#shared-memory-installation" id="id12">Shared Memory Installation</a></p></li>
+<li><p><a class="reference internal" href="#references" id="id13">References</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+</aside>
+<section id="id1">
+<h1><a class="toc-backref" href="#id8" role="doc-backlink">WRF 4.1.1 Installation</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h1>
+<section id="tested-on-requirements">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Tested on (Requirements)</a><a class="headerlink" href="#tested-on-requirements" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>OS base:</strong> CentOS (x86_64) <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 6.6</p></li>
+<li><p><strong>Compiler:</strong> Intel <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 19.0.4</p></li>
+<li><p><strong>Requirements:</strong></p>
+<ul>
+<li><p>zlib <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 1.2.11 with Intel 19.0.4</p></li>
+<li><p>szip <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 2.1.1 with Intel 19.0.4</p></li>
+<li><p>hdf5 <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 1.12 with Intel 19.0.4</p></li>
+<li><p>NetCDF-C <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 4.7.4 with Intel 19.0.4</p></li>
+<li><p>NetCDF-Fortran <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 4.5.3 with Intel 19.0.4</p></li>
+<li><p>MPICH <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 3.3.2 with Intel 19.0.4</p></li>
+<li><p>JasPer <span class="math notranslate nohighlight">\(\boldsymbol{\ge}\)</span> 1.900.1 with Intel 19.0.4</p></li>
+</ul>
+</li>
+</ul>
+<p>Make sure you have all the dependencies installed correctly. If you don’t have them installed or think you have them installed correctly, please go to the following guide because your installation will most likely fail. <a class="reference internal" href="installation-dependencies.html#wrf-4-1-1-installation-dependencies"><span class="std std-ref">WRF 4.1.1 Dependencies</span></a></p>
+</section>
+<section id="build-process">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Build process</a><a class="headerlink" href="#build-process" title="Link to this heading"></a></h2>
+<ol class="arabic">
+<li><p>Get the source code</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/wrf-model/WRF/archive/v4.1.1.tar.gz
+tar<span class="w"> </span>xvf<span class="w"> </span>v4.1.1.tar.gz
+<span class="nb">cd</span><span class="w"> </span>WRF-4.1.1
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="distributed-memory-installation">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Distributed Memory Installation</a><a class="headerlink" href="#distributed-memory-installation" title="Link to this heading"></a></h2>
+<p>This is the installation for the distributed memory option that WRF has, please follow it exactly as it is.</p>
+<ol class="arabic">
+<li><p>Load the necessary modules</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel/19.0.4
+module<span class="w"> </span>load<span class="w"> </span>szip/2.1.1_intel_19.0.4
+module<span class="w"> </span>load<span class="w"> </span>zlib/1.2.11_intel_19.0.4
+module<span class="w"> </span>load<span class="w"> </span>hdf5/1.12_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>netcdf/4.7.4_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>netcdf-fortran/4.5.3_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>mpich2/3.3.2_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>jasper/1.900.1_intel-19.0.4
+</pre></div>
+</div>
+</li>
+<li><p>Execute the configuration script, you will be asked two questions, choose <code class="docutils literal notranslate"><span class="pre">16</span></code> for the fist one (Enables distributed-memory processing with the Intel compiler), and <code class="docutils literal notranslate"><span class="pre">1</span></code> for the second one.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./configure
+</pre></div>
+</div>
+</li>
+<li><p>Compile WRF, with the case you need, we recommend the case to be <code class="docutils literal notranslate"><span class="pre">em_real</span></code>.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./compile<span class="w"> </span>&lt;<span class="k">case</span>&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>wrf-compilation.log
+</pre></div>
+</div>
+<p>In <code class="code highlight bash docutils literal highlight-bash">main/</code> you should see the following executables:</p>
+<ul>
+<li><p>If you compile a real case:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wrf.exe
+real.exe
+ndown.exe
+tc.exe
+</pre></div>
+</div>
+</li>
+<li><p>If you compile an idealized case</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wrf.exe
+ideal.exe
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<section id="modulefile">
+<h3>Modulefile<a class="headerlink" href="#modulefile" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#%Module1.0####################################################################</span>
+<span class="c1">##</span>
+<span class="c1">## module load wrf/4.1.1_intel-19.0.4</span>
+<span class="c1">##</span>
+<span class="c1">## /share/apps/modules/wrf/4.1.1/intel-19.0.4</span>
+<span class="c1">## Written by Tomas Navarro &amp; Santiago Alzate</span>
+<span class="c1">##</span>
+
+proc<span class="w"> </span>ModulesHelp<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="o">{</span>
+<span class="w">     </span>global<span class="w"> </span>version<span class="w"> </span>modroot
+<span class="w">     </span>puts<span class="w"> </span>stderr<span class="w"> </span><span class="s2">&quot;Sets the environment for using wrf-4.1.1\</span>
+<span class="s2">                  \nin the shared directory /share/apps/wrf/4.1.1/intel-19.0.4/\</span>
+<span class="s2">                  \nbuilded with intel-2017_update-1, netcdf-fortran-4.4.4,\</span>
+<span class="s2">          \nnetcdf-4.5.0, hdf5-1.8.19, jasper-1.900.1&quot;</span>
+<span class="o">}</span>
+
+module-whatis<span class="w"> </span><span class="s2">&quot;(Name________) wrf&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Version_____) 4.1.1&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Compilers___) intel-2019_update-4&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(System______) x86_64-redhat-linux&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Libraries___) &quot;</span>
+
+<span class="c1"># for Tcl script use only</span>
+<span class="nb">set</span><span class="w">         </span>topdir<span class="w">        </span>/share/apps/wrf/4.1.1/intel-19.0.4
+<span class="nb">set</span><span class="w">         </span>version<span class="w">       </span><span class="m">4</span>.1.1
+<span class="nb">set</span><span class="w">         </span>sys<span class="w">           </span>x86_64-redhat-linux
+
+module<span class="w"> </span>load<span class="w"> </span>intel/19.0.4
+module<span class="w"> </span>load<span class="w"> </span>hdf5/1.12_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>netcdf/4.7.4_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>netcdf-fortran/4.5.3_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>mpich2/3.3.2_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>jasper/1.900.1_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>wps/4.1_intel-19.0.4
+
+setenv<span class="w">       </span>WRFIO_NCD_LARGE_FILE_SUPPORT<span class="w">   </span><span class="m">1</span>
+
+setenv<span class="w">       </span>WRF_DIR<span class="w">                        </span><span class="nv">$topdir</span>
+
+prepend-path<span class="w"> </span>PATH<span class="w">               </span><span class="nv">$topdir</span>/main
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="compile-wps-4-1-distributed">
+<h3>Compile WPS 4.1 Distributed<a class="headerlink" href="#compile-wps-4-1-distributed" title="Link to this heading"></a></h3>
+<p>The WRF Preprocessing System (WPS) <a class="footnote-reference brackets" href="#id7" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is a set of three programs whose collective
+role is to prepare input to the real.exe program for real-data simulations.</p>
+<ol class="arabic">
+<li><p>Download the latest version of WSP</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/wrf-model/WPS/archive/v4.1.tar.gz
+tar<span class="w"> </span>xvf<span class="w"> </span><span class="m">4</span>.1.tar.gz
+<span class="nb">cd</span><span class="w"> </span>WPS-4.1
+</pre></div>
+</div>
+</li>
+<li><p>Load the correspondent modules and execute the configuration script, use the option <code class="docutils literal notranslate"><span class="pre">19</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>wrf/4.1.1_intel-19.0.4
+./configure
+</pre></div>
+</div>
+</li>
+<li><p>Edit the configuration file <code class="code highlight bash docutils literal highlight-bash">configure.wps</code></p>
+<blockquote>
+<div><p>In the section <code class="docutils literal notranslate"><span class="pre">WRF_LIB</span> <span class="pre">=</span></code> add after the following parameter <code class="docutils literal notranslate"><span class="pre">-lnetcdf</span></code> these parameters  <code class="docutils literal notranslate"><span class="pre">-liomp5</span> <span class="pre">-lpthread</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Compile it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./compile<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>wps-compilation.log
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id3">
+<h3>Modulefile<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#%Module1.0####################################################################</span>
+<span class="c1">##</span>
+<span class="c1">## module load wps/4.1_intel-19.0.4</span>
+<span class="c1">##</span>
+<span class="c1">## /share/apps/modules/wps/4.1/intel-19.0.4</span>
+<span class="c1">## Written by Tomas Navarro &amp; Santiago Alzate</span>
+<span class="c1">##</span>
+
+proc<span class="w"> </span>ModulesHelp<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="o">{</span>
+<span class="w">     </span>global<span class="w"> </span>version<span class="w"> </span>modroot
+<span class="w">     </span>puts<span class="w"> </span>stderr<span class="w"> </span><span class="s2">&quot;Sets the environment for using wps-4.1\</span>
+<span class="s2">                  \nin the shared directory /share/apps/wps/4.1/intel-19.0.4/\</span>
+<span class="s2">                  \nbuilded with intel-2019_update-4, wrf-4.1.1, netcdf-fortran-4.5.3,\</span>
+<span class="s2">          \nnetcdf-4.7.4, hdf5-1.12, jasper-1.900.1\n&quot;</span>
+<span class="o">}</span>
+
+module-whatis<span class="w"> </span><span class="s2">&quot;(Name________) wps&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Version_____) 4.1&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Compilers___) intel-2019_update-4&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(System______) x86_64-redhat-linux&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Libraries___) &quot;</span>
+
+<span class="c1"># for Tcl script use only</span>
+<span class="nb">set</span><span class="w">         </span>topdir<span class="w">        </span>/share/apps/wps/4.1/intel-19.0.4
+<span class="nb">set</span><span class="w">         </span>version<span class="w">       </span><span class="m">4</span>.1
+<span class="nb">set</span><span class="w">         </span>sys<span class="w">           </span>x86_64-redhat-linux
+
+module<span class="w"> </span>load<span class="w"> </span>intel/19.0.4
+module<span class="w"> </span>load<span class="w"> </span>jasper/1.900.1_intel-19.0.4
+
+prepend-path<span class="w"> </span>PATH<span class="w">               </span><span class="nv">$topdir</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="shared-memory-installation">
+<h2><a class="toc-backref" href="#id12" role="doc-backlink">Shared Memory Installation</a><a class="headerlink" href="#shared-memory-installation" title="Link to this heading"></a></h2>
+<p>This is the installation for the Shared-Memory/Serial option that WRF has, please follow it exactly as it is.</p>
+<ol class="arabic">
+<li><p>Load the necessary modules</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>intel/19.0.4
+module<span class="w"> </span>load<span class="w"> </span>szip/2.1.1_intel_19.0.4
+module<span class="w"> </span>load<span class="w"> </span>zlib/1.2.11_intel_19.0.4
+module<span class="w"> </span>load<span class="w"> </span>hdf5/1.12_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>netcdf/4.7.4_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>netcdf-fortran/4.5.3_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>jasper/1.900.1_intel-19.0.4
+</pre></div>
+</div>
+</li>
+<li><p>Execute the configuration script, you will be asked two questions, choose <code class="docutils literal notranslate"><span class="pre">14</span></code> for the fist one (Enables shared-memory processing with the Intel compiler), and <code class="docutils literal notranslate"><span class="pre">1</span></code> for the second one.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./configure
+</pre></div>
+</div>
+</li>
+<li><p>Compile WRF, with the case you need, we recommend the case to be <code class="docutils literal notranslate"><span class="pre">em_real</span></code>.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./compile<span class="w"> </span>&lt;<span class="k">case</span>&gt;<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>wrf-compilation.log
+</pre></div>
+</div>
+<p>In <code class="code highlight bash docutils literal highlight-bash">main/</code> you should see the following executables:</p>
+<ul>
+<li><p>If you compile a real case:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wrf.exe
+real.exe
+ndown.exe
+tc.exe
+</pre></div>
+</div>
+</li>
+<li><p>If you compile an idealized case</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wrf.exe
+ideal.exe
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<section id="id4">
+<h3>Modulefile<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#%Module1.0####################################################################</span>
+<span class="c1">##</span>
+<span class="c1">## module load wrf/4.1.1_sm_intel-19.0.4</span>
+<span class="c1">##</span>
+<span class="c1">## /share/apps/modules/wrf/4.1.1/sm-intel-19.0.4</span>
+<span class="c1">## Written by Tomas Navarro &amp; Santiago Alzate</span>
+<span class="c1">##</span>
+
+proc<span class="w"> </span>ModulesHelp<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="o">{</span>
+<span class="w">     </span>global<span class="w"> </span>version<span class="w"> </span>modroot
+<span class="w">     </span>puts<span class="w"> </span>stderr<span class="w"> </span><span class="s2">&quot;Sets the environment for using wrf-4.1.1\</span>
+<span class="s2">                  \nin the shared directory /share/apps/wrf/4.1.1/sm-intel-19.0.4/\</span>
+<span class="s2">                  \nbuilded with intel-2017_update-1, netcdf-fortran-4.4.4,\</span>
+<span class="s2">          \nnetcdf-4.5.0, hdf5-1.8.19, jasper-1.900.1&quot;</span>
+<span class="o">}</span>
+
+module-whatis<span class="w"> </span><span class="s2">&quot;(Name________) wrf&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Version_____) 4.1.1 Shared-Memory&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Compilers___) intel-2019_update-4&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(System______) x86_64-redhat-linux&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Libraries___) &quot;</span>
+
+<span class="c1"># for Tcl script use only</span>
+<span class="nb">set</span><span class="w">         </span>topdir<span class="w">        </span>/share/apps/wrf/4.1.1/sm-intel-19.0.4
+<span class="nb">set</span><span class="w">         </span>version<span class="w">       </span><span class="m">4</span>.1.1
+<span class="nb">set</span><span class="w">         </span>sys<span class="w">           </span>x86_64-redhat-linux
+
+module<span class="w"> </span>load<span class="w"> </span>intel/19.0.4
+module<span class="w"> </span>load<span class="w"> </span>hdf5/1.12_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>netcdf/4.7.4_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>netcdf-fortran/4.5.3_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>jasper/1.900.1_intel-19.0.4
+module<span class="w"> </span>load<span class="w"> </span>wps/4.1_sm_intel-19.0.4
+
+setenv<span class="w">       </span>WRFIO_NCD_LARGE_FILE_SUPPORT<span class="w">   </span><span class="m">1</span>
+
+setenv<span class="w">       </span>WRF_DIR<span class="w">                        </span><span class="nv">$topdir</span>
+
+prepend-path<span class="w"> </span>PATH<span class="w">               </span><span class="nv">$topdir</span>/main
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="compile-wps-4-1-serial">
+<h3>Compile WPS 4.1 Serial<a class="headerlink" href="#compile-wps-4-1-serial" title="Link to this heading"></a></h3>
+<p>The WRF Preprocessing System (WPS) <a class="footnote-reference brackets" href="#id7" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> is a set of three programs whose collective
+role is to prepare input to the real.exe program for real-data simulations.</p>
+<ol class="arabic">
+<li><p>Download the latest version of WSP</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/wrf-model/WPS/archive/v4.1.tar.gz
+tar<span class="w"> </span>xvf<span class="w"> </span><span class="m">4</span>.1.tar.gz
+<span class="nb">cd</span><span class="w"> </span>WPS-4.1
+</pre></div>
+</div>
+</li>
+<li><p>Load the correspondent modules and execute the configuration script, use the option <code class="docutils literal notranslate"><span class="pre">17</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>module<span class="w"> </span>load<span class="w"> </span>wrf/4.1.1_intel-19.0.4
+./configure
+</pre></div>
+</div>
+</li>
+<li><p>Edit the configuration file <code class="code highlight bash docutils literal highlight-bash">configure.wps</code></p>
+<blockquote>
+<div><p>In the section <code class="docutils literal notranslate"><span class="pre">WRF_LIB</span> <span class="pre">=</span></code> add after the following parameter <code class="docutils literal notranslate"><span class="pre">-lnetcdf</span></code> these parameters  <code class="docutils literal notranslate"><span class="pre">-liomp5</span> <span class="pre">-lpthread</span></code></p>
+</div></blockquote>
+</li>
+<li><p>Compile it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./compile<span class="w"> </span><span class="p">|</span><span class="w"> </span>tee<span class="w"> </span>wps-compilation.log
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="id6">
+<h3>Modulefile<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#%Module1.0####################################################################</span>
+<span class="c1">##</span>
+<span class="c1">## module load wps/4.1_sm_intel-19.0.4</span>
+<span class="c1">##</span>
+<span class="c1">## /share/apps/modules/wps/4.1/sm-intel-19.0.4</span>
+<span class="c1">## Written by Tomas Navarro &amp; Santiago Alzate</span>
+<span class="c1">##</span>
+
+proc<span class="w"> </span>ModulesHelp<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="o">{</span>
+<span class="w">     </span>global<span class="w"> </span>version<span class="w"> </span>modroot
+<span class="w">     </span>puts<span class="w"> </span>stderr<span class="w"> </span><span class="s2">&quot;Sets the environment for using wps-4.1\</span>
+<span class="s2">                  \nin the shared directory /share/apps/wps/4.1/sm-intel-19.0.4/\</span>
+<span class="s2">                  \nbuilded with intel-2019_update-4, wrf-4.1.1, netcdf-fortran-4.5.3,\</span>
+<span class="s2">          \nnetcdf-4.7.4, hdf5-1.12, jasper-1.900.1\n&quot;</span>
+<span class="o">}</span>
+
+module-whatis<span class="w"> </span><span class="s2">&quot;(Name________) wps&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Version_____) 4.1 Serial&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Compilers___) intel-2019_update-4&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(System______) x86_64-redhat-linux&quot;</span>
+module-whatis<span class="w"> </span><span class="s2">&quot;(Libraries___) &quot;</span>
+
+<span class="c1"># for Tcl script use only</span>
+<span class="nb">set</span><span class="w">         </span>topdir<span class="w">        </span>/share/apps/wps/4.1/sm-intel-19.0.4
+<span class="nb">set</span><span class="w">         </span>version<span class="w">       </span><span class="m">4</span>.1
+<span class="nb">set</span><span class="w">         </span>sys<span class="w">           </span>x86_64-redhat-linux
+
+module<span class="w"> </span>load<span class="w"> </span>intel/19.0.4
+module<span class="w"> </span>load<span class="w"> </span>jasper/1.900.1_intel-19.0.4
+
+prepend-path<span class="w"> </span>PATH<span class="w">               </span><span class="nv">$topdir</span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="references">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">References</a><a class="headerlink" href="#references" title="Link to this heading"></a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="id7" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id2">1</a>,<a role="doc-backlink" href="#id5">2</a>)</span>
+<p>Mesoscale &amp; Microscale Meteorology Laboratory. (n.d.). Chapter 3: WRF Preprocessing System. [online] Available at: <a class="reference external" href="http://www2.mmm.ucar.edu/wrf/users/docs/user_guide/users_guide_chap3.html">http://www2.mmm.ucar.edu/wrf/users/docs/user_guide/users_guide_chap3.html</a> [Accessed 28 Aug. 2019].</p>
+</aside>
+</aside>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation-dependencies.html" class="btn btn-neutral float-left" title="WRF 4.1.1 Dependencies" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../4.2/index.html" class="btn btn-neutral float-right" title="WRF 4.2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

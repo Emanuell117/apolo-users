@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apolo User Tools &mdash; apolo-docs 0.1 documentation</title>
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/sidebar.css" type="text/css" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Supercomputers" href="../supercomputers/index.html" />
+    <link rel="prev" title="How Science Drives Architecture - NERSC" href="hpc-tables.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+  
+    <a href="../index.html" class="icon icon-home"> apolo-docs
+  
+
+  
+    </a>
+
+    
+
+    
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#how-to-apply-for-computing-time-on-apolo">How to apply for computing time on Apolo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#requirements-on-the-software">Requirements on the software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#get-an-account">Get an account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#configure-vpn">Configure VPN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#educational-resources">Educational Resources</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#apolo-user-tools">Apolo User Tools</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Apolo User Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#repository-structure">Repository structure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#available-commands">Available Commands</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#get-help">Get Help</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../supercomputers/index.html">Supercomputers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../software/index.html">Software</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to-acknowledge.html">How to Acknowledge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../report-a-bug.html">Report a Bug</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">apolo-docs</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Getting Started</a></li>
+      <li class="breadcrumb-item active">Apolo User Tools</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/gettingstarted/apolo_user_tools.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="apolo-user-tools">
+<span id="id1"></span><h1>Apolo User Tools<a class="headerlink" href="#apolo-user-tools" title="Link to this heading"></a></h1>
+<section id="repository-structure">
+<h2>Repository structure<a class="headerlink" href="#repository-structure" title="Link to this heading"></a></h2>
+<p>The repository could be found at <a class="reference external" href="https://github.com/eafit-apolo/apolo-user-tools">https://github.com/eafit-apolo/apolo-user-tools</a></p>
+<p>The repo contains two main directories: bash-tools and src</p>
+<ul class="simple">
+<li><p><strong>bash-tools:</strong> Contains aliases or functions that are written in Bash. If you plan to add aliases put it in the
+file <strong>default-aliases</strong> in the section related with purpose of the alias. If more complex commands are needed,
+include it using another file in the same directory with a clear title.</p></li>
+<li><p><strong>src:</strong> Contains directories with more complex commands that are written in any language, we specially encourage
+the use of Python. The directories inside src are application-specific, e.g: slurm, ansible, file-system, etc.</p>
+<ul>
+<li><p><strong>application-specific:</strong> These directories contain the different scripts that will become available commands
+to our users. These scripts could be in single files or directories. Commands in the same application-specific
+directory share the same environnement and language, libraries or other requisites. Each application-specific
+directory contains a single file that specifies these requisites, feel free to modify it.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="available-commands">
+<h2>Available Commands<a class="headerlink" href="#available-commands" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>smyqueue:</strong> This command prints the status of the current jobs in slurm queue of the user who executed the command.</p></li>
+<li><p><strong>sncores:</strong> This command print the total number of cores in the system and groups it by its status (Allocated, idle and
+other).</p></li>
+<li><p><strong>squeue-stats:</strong> This command prints statistics about current waiting and active jobs.</p></li>
+<li><p><strong>sqos-usage:</strong> This command is used to check how many hours a group has used of the total available in the qos of the group (This command applies just for paid users).</p></li>
+<li><p><strong>du-home:</strong> This command prints the total used space in disk of the user who executed the command.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p>Juan David Arcila Moreno &lt;<a class="reference external" href="mailto:jarcil13&#37;&#52;&#48;eafit&#46;edu&#46;co">jarcil13<span>&#64;</span>eafit<span>&#46;</span>edu<span>&#46;</span>co</a>&gt;</p></li>
+<li><p>Juan Diego Ocampo García &lt;<a class="reference external" href="mailto:jocamp18&#37;&#52;&#48;eafit&#46;edu&#46;co">jocamp18<span>&#64;</span>eafit<span>&#46;</span>edu<span>&#46;</span>co</a>&gt;</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="hpc-tables.html" class="btn btn-neutral float-left" title="How Science Drives Architecture - NERSC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../supercomputers/index.html" class="btn btn-neutral float-right" title="Supercomputers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Creative Commons Attribution-NonCommercial 4.0 International License.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
